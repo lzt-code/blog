@@ -1,0 +1,16 @@
+# IDE & Tools
+.claude/
+.trae/
+.vscode/
+.claude.json
+CLAUDE.md
+
+# Scripts & Internal Tools
+script/
+scripts/
+temp/
+
+# System Files
+.DS_Store
+Thumbs.db
+*.log

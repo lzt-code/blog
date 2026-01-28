@@ -1,0 +1,78 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Microsoft YaHei', sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .cycle-text { font-family: 'Microsoft YaHei', sans-serif; font-size: 14px; fill: #34495e; text-anchor: middle; }
+      .cycle-box { fill: #ecf0f1; stroke: #bdc3c7; stroke-width: 2; rx: 10; }
+      .negative-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; rx: 10; }
+      .arrow { fill: none; stroke: #e74c3c; stroke-width: 3; marker-end: url(#arrowhead); opacity: 0.8; stroke-linecap: round; stroke-linejoin: round; }
+      .arrow:hover { opacity: 1; stroke-width: 4; }
+      .center-text { font-family: 'Microsoft YaHei', sans-serif; font-size: 18px; font-weight: bold; fill: #e74c3c; text-anchor: middle; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#e74c3c" stroke="#c0392b" stroke-width="0.5" />
+    </marker>
+  </defs>
+  
+  <!-- 标题 -->
+  <text x="400" y="40" class="title" text-anchor="middle">平台生态恶性循环</text>
+  
+  <!-- 中心文字 -->
+  <text x="400" y="290" class="center-text">恶性</text>
+  <text x="400" y="315" class="center-text">循环</text>
+  
+  <!-- 循环节点 -->
+  <!-- 1. 基础库不完善 -->
+  <rect x="300" y="80" width="200" height="60" class="negative-box"/>
+  <text x="400" y="105" class="cycle-text">基础库不完善</text>
+  <text x="400" y="125" class="cycle-text">三方库缺乏适配</text>
+  
+  <!-- 2. 开发者移植困难 -->
+  <rect x="520" y="180" width="200" height="60" class="cycle-box"/>
+  <text x="620" y="205" class="cycle-text">开发者移植困难</text>
+  <text x="620" y="225" class="cycle-text">工作量大、意愿低</text>
+  
+  <!-- 3. App数量少质量差 -->
+  <rect x="520" y="360" width="200" height="60" class="cycle-box"/>
+  <text x="620" y="385" class="cycle-text">App数量少</text>
+  <text x="620" y="405" class="cycle-text">质量差、功能缺失</text>
+  
+  <!-- 4. 用户量不足 -->
+  <rect x="300" y="460" width="200" height="60" class="cycle-box"/>
+  <text x="400" y="485" class="cycle-text">用户量不足</text>
+  <text x="400" y="505" class="cycle-text">难以快速提升</text>
+  
+  <!-- 5. 开发者缺乏 -->
+  <rect x="80" y="360" width="200" height="60" class="cycle-box"/>
+  <text x="180" y="385" class="cycle-text">开发者缺乏</text>
+  <text x="180" y="405" class="cycle-text">吸引力不足</text>
+  
+  <!-- 6. 生态建设滞后 -->
+  <rect x="80" y="180" width="200" height="60" class="cycle-box"/>
+  <text x="180" y="205" class="cycle-text">生态建设滞后</text>
+  <text x="180" y="225" class="cycle-text">投入不足</text>
+  
+  <!-- 箭头连接 -->
+  <!-- 基础库不完善 → 开发者移植困难 -->
+  <path d="M 470 140 Q 500 160 520 180" class="arrow"/>
+  
+  <!-- 开发者移植困难 → App数量少 -->
+  <path d="M 620 240 L 620 360" class="arrow"/>
+  
+  <!-- App数量少 → 用户量不足 -->
+  <path d="M 520 400 Q 480 420 460 460" class="arrow"/>
+  
+  <!-- 用户量不足 → 开发者缺乏 -->
+  <path d="M 300 480 Q 260 460 240 420" class="arrow"/>
+  
+  <!-- 开发者缺乏 → 生态建设滞后 -->
+  <path d="M 180 360 L 180 240" class="arrow"/>
+  
+  <!-- 生态建设滞后 → 基础库不完善 -->
+  <path d="M 280 200 Q 320 160 340 140" class="arrow"/>
+  
+  <!-- 说明文字 -->
+  <text x="50" y="580" style="font-family: 'Microsoft YaHei', sans-serif; font-size: 12px; fill: #7f8c8d;">
+    每个环节都相互影响，形成难以打破的恶性循环
+  </text>
+</svg>

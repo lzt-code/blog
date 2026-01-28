@@ -1,0 +1,210 @@
+<svg width="900" height="700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flutterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42a5f5;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#1976d2;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="rnGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#61dafb;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#21a0c4;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="kmpGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#5b21b6;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="uniappGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2dd4bf;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="mauiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#512bd4;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#3c1a78;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#64748b" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="700" fill="url(#bgGradient)"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">2025年跨平台技术选型决策图</text>
+  
+  <!-- 决策流程 -->
+  <g transform="translate(50, 60)">
+    <!-- 起始点 -->
+    <g transform="translate(350, 0)">
+      <circle cx="50" cy="30" r="25" fill="#f59e0b" filter="url(#shadow)"/>
+      <text x="50" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">开始选型</text>
+    </g>
+    
+    <!-- 第一层决策：团队技术栈 -->
+    <g transform="translate(0, 80)">
+      <rect x="0" y="0" width="800" height="60" rx="12" fill="rgba(59, 130, 246, 0.1)" stroke="#3b82f6" stroke-width="2"/>
+      <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">第一步：评估团队技术栈</text>
+      
+      <g transform="translate(50, 35)">
+        <rect x="0" y="0" width="120" height="20" rx="4" fill="#61dafb" opacity="0.3"/>
+        <text x="60" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">React/JS 背景</text>
+      </g>
+      
+      <g transform="translate(190, 35)">
+        <rect x="0" y="0" width="120" height="20" rx="4" fill="#512bd4" opacity="0.3"/>
+        <text x="60" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">.NET/C# 背景</text>
+      </g>
+      
+      <g transform="translate(330, 35)">
+        <rect x="0" y="0" width="120" height="20" rx="4" fill="#7c3aed" opacity="0.3"/>
+        <text x="60" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Kotlin 背景</text>
+      </g>
+      
+      <g transform="translate(470, 35)">
+        <rect x="0" y="0" width="120" height="20" rx="4" fill="#2dd4bf" opacity="0.3"/>
+        <text x="60" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">Vue 背景</text>
+      </g>
+      
+      <g transform="translate(610, 35)">
+        <rect x="0" y="0" width="120" height="20" rx="4" fill="#42a5f5" opacity="0.3"/>
+        <text x="60" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">无移动端经验</text>
+      </g>
+    </g>
+    
+    <!-- 箭头 -->
+    <path d="M 400 60 L 400 80" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowBlue)"/>
+    
+    <!-- 第二层决策：项目需求 -->
+    <g transform="translate(0, 160)">
+      <rect x="0" y="0" width="800" height="80" rx="12" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="2"/>
+      <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">第二步：分析项目需求</text>
+      
+      <g transform="translate(30, 35)">
+        <circle cx="8" cy="8" r="6" fill="#ef4444"/>
+        <text x="20" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">高性能要求（游戏、音视频）</text>
+      </g>
+      
+      <g transform="translate(250, 35)">
+        <circle cx="8" cy="8" r="6" fill="#f59e0b"/>
+        <text x="20" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">快速迭代（社交、内容）</text>
+      </g>
+      
+      <g transform="translate(450, 35)">
+        <circle cx="8" cy="8" r="6" fill="#8b5cf6"/>
+        <text x="20" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">企业级应用（CRM、ERP）</text>
+      </g>
+      
+      <g transform="translate(30, 55)">
+        <circle cx="8" cy="8" r="6" fill="#06b6d4"/>
+        <text x="20" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">多端发布（小程序、Web）</text>
+      </g>
+      
+      <g transform="translate(250, 55)">
+        <circle cx="8" cy="8" r="6" fill="#10b981"/>
+        <text x="20" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">热更新需求</text>
+      </g>
+      
+      <g transform="translate(450, 55)">
+        <circle cx="8" cy="8" r="6" fill="#7c3aed"/>
+        <text x="20" y="12" font-family="Arial, sans-serif" font-size="11" fill="#1e293b">原生API密集调用</text>
+      </g>
+    </g>
+    
+    <!-- 箭头 -->
+    <path d="M 400 140 L 400 160" stroke="#10b981" stroke-width="3" marker-end="url(#arrowGreen)"/>
+    
+    <!-- 推荐方案 -->
+    <g transform="translate(0, 260)">
+      <text x="400" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">推荐方案</text>
+      
+      <!-- Flutter -->
+      <g transform="translate(50, 40)">
+        <rect x="0" y="0" width="140" height="120" rx="12" fill="url(#flutterGradient)" filter="url(#shadow)"/>
+        <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Flutter</text>
+        <text x="15" y="45" font-family="Arial, sans-serif" font-size="10" fill="white">✓ 高性能自渲染</text>
+        <text x="15" y="60" font-family="Arial, sans-serif" font-size="10" fill="white">✓ 丰富生态</text>
+        <text x="15" y="75" font-family="Arial, sans-serif" font-size="10" fill="white">✓ Google支持</text>
+        <text x="15" y="90" font-family="Arial, sans-serif" font-size="10" fill="white">适合：大多数场景</text>
+        <text x="15" y="105" font-family="Arial, sans-serif" font-size="9" fill="white">推荐指数：⭐⭐⭐⭐⭐</text>
+      </g>
+      
+      <!-- React Native -->
+      <g transform="translate(210, 40)">
+        <rect x="0" y="0" width="140" height="120" rx="12" fill="url(#rnGradient)" filter="url(#shadow)"/>
+        <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">React Native</text>
+        <text x="15" y="45" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">✓ Web开发体验</text>
+        <text x="15" y="60" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">✓ 热更新</text>
+        <text x="15" y="75" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">✓ 原生组件</text>
+        <text x="15" y="90" font-family="Arial, sans-serif" font-size="10" fill="#1e293b">适合：React团队</text>
+        <text x="15" y="105" font-family="Arial, sans-serif" font-size="9" fill="#1e293b">推荐指数：⭐⭐⭐⭐</text>
+      </g>
+      
+      <!-- KMP -->
+      <g transform="translate(370, 40)">
+        <rect x="0" y="0" width="140" height="120" rx="12" fill="url(#kmpGradient)" filter="url(#shadow)"/>
+        <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">KMP</text>
+        <text x="15" y="45" font-family="Arial, sans-serif" font-size="10" fill="white">✓ 原生性能</text>
+        <text x="15" y="60" font-family="Arial, sans-serif" font-size="10" fill="white">✓ 业务逻辑共享</text>
+        <text x="15" y="75" font-family="Arial, sans-serif" font-size="10" fill="white">✓ 渐进式迁移</text>
+        <text x="15" y="90" font-family="Arial, sans-serif" font-size="10" fill="white">适合：技术极客</text>
+        <text x="15" y="105" font-family="Arial, sans-serif" font-size="9" fill="white">推荐指数：⭐⭐⭐</text>
+      </g>
+      
+      <!-- uni-app -->
+      <g transform="translate(530, 40)">
+        <rect x="0" y="0" width="140" height="120" rx="12" fill="url(#uniappGradient)" filter="url(#shadow)"/>
+        <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">uni-app</text>
+        <text x="15" y="45" font-family="Arial, sans-serif" font-size="10" fill="white">✓ 多端统一</text>
+        <text x="15" y="60" font-family="Arial, sans-serif" font-size="10" fill="white">✓ Vue语法</text>
+        <text x="15" y="75" font-family="Arial, sans-serif" font-size="10" fill="white">✓ 小程序支持</text>
+        <text x="15" y="90" font-family="Arial, sans-serif" font-size="10" fill="white">适合：Vue团队</text>
+        <text x="15" y="105" font-family="Arial, sans-serif" font-size="9" fill="white">推荐指数：⭐⭐⭐⭐</text>
+      </g>
+    </g>
+    
+    <!-- 选型原则 -->
+    <g transform="translate(0, 450)">
+      <rect x="0" y="0" width="800" height="120" rx="12" fill="rgba(245, 158, 11, 0.1)" stroke="#f59e0b" stroke-width="2"/>
+      <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">2025年选型三大原则</text>
+      
+      <g transform="translate(50, 40)">
+        <circle cx="15" cy="15" r="12" fill="#10b981"/>
+        <text x="15" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">1</text>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">务实</text>
+        <text x="35" y="35" font-family="Arial, sans-serif" font-size="11" fill="#475569">没有完美方案，选择合适的</text>
+        <text x="35" y="50" font-family="Arial, sans-serif" font-size="11" fill="#475569">考虑当前约束条件下的最大收益</text>
+      </g>
+      
+      <g transform="translate(280, 40)">
+        <circle cx="15" cy="15" r="12" fill="#3b82f6"/>
+        <text x="15" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">2</text>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">聚焦</text>
+        <text x="35" y="35" font-family="Arial, sans-serif" font-size="11" fill="#475569">一个团队最多掌握两种技术</text>
+        <text x="35" y="50" font-family="Arial, sans-serif" font-size="11" fill="#475569">深度比广度更重要</text>
+      </g>
+      
+      <g transform="translate(510, 40)">
+        <circle cx="15" cy="15" r="12" fill="#8b5cf6"/>
+        <text x="15" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">3</text>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">长期主义</text>
+        <text x="35" y="35" font-family="Arial, sans-serif" font-size="11" fill="#475569">考虑3年后的维护成本</text>
+        <text x="35" y="50" font-family="Arial, sans-serif" font-size="11" fill="#475569">选择有长期支持的技术</text>
+      </g>
+    </g>
+    
+
+  </g>
+  
+  <!-- 箭头标记定义 -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="7" refY="2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,4 L6,2 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,4 L6,2 z" fill="#10b981"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,133 @@
+<svg width="800" height="650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="800" height="650" fill="url(#bgGradient)"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white">
+    AI友好度影响因素分析
+  </text>
+  
+  <!-- 左侧：训练数据丰富度 -->
+  <g transform="translate(50, 80)">
+    <rect width="320" height="220" rx="15" fill="white" opacity="0.95" filter="url(#shadow)"/>
+    <text x="160" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">
+      训练数据丰富度
+    </text>
+    
+    <!-- Bloc 数据条 -->
+    <text x="20" y="55" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FF9800">Bloc</text>
+    <rect x="100" y="45" width="180" height="15" rx="7" fill="#f0f0f0"/>
+    <rect x="100" y="45" width="162" height="15" rx="7" fill="#FF9800"/>
+    <text x="290" y="56" font-family="Arial, sans-serif" font-size="12" fill="#333">90%</text>
+    
+    <!-- Provider 数据条 -->
+    <text x="20" y="85" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4CAF50">Provider</text>
+    <rect x="100" y="75" width="180" height="15" rx="7" fill="#f0f0f0"/>
+    <rect x="100" y="75" width="144" height="15" rx="7" fill="#4CAF50"/>
+    <text x="290" y="86" font-family="Arial, sans-serif" font-size="12" fill="#333">80%</text>
+    
+    <!-- Riverpod 数据条 -->
+    <text x="20" y="115" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2196F3">Riverpod</text>
+    <rect x="100" y="105" width="180" height="15" rx="7" fill="#f0f0f0"/>
+    <rect x="100" y="105" width="144" height="15" rx="7" fill="#2196F3"/>
+    <text x="290" y="116" font-family="Arial, sans-serif" font-size="12" fill="#333">80%</text>
+    
+    <!-- 进一步增加间隔后的说明文字 -->
+    <text x="20" y="170" font-family="Arial, sans-serif" font-size="11" fill="#666">
+      • Bloc: 2019年至今，GitHub上万个项目
+    </text>
+    <text x="20" y="185" font-family="Arial, sans-serif" font-size="11" fill="#666">
+      • Provider: 官方推荐，文档丰富
+    </text>
+    <text x="20" y="200" font-family="Arial, sans-serif" font-size="11" fill="#666">
+      • Riverpod: 近年快速发展，社区活跃
+    </text>
+  </g>
+  
+  <!-- 右侧：代码逻辑直观性 -->
+  <g transform="translate(430, 80)">
+    <rect width="320" height="220" rx="15" fill="white" opacity="0.95" filter="url(#shadow)"/>
+    <text x="160" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">
+      代码逻辑直观性
+    </text>
+    
+    <!-- Bloc 数据条 -->
+    <text x="20" y="55" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FF9800">Bloc</text>
+    <rect x="100" y="45" width="180" height="15" rx="7" fill="#f0f0f0"/>
+    <rect x="100" y="45" width="171" height="15" rx="7" fill="#FF9800"/>
+    <text x="290" y="56" font-family="Arial, sans-serif" font-size="12" fill="#333">95%</text>
+    
+    <!-- Provider 数据条 -->
+    <text x="20" y="85" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4CAF50">Provider</text>
+    <rect x="100" y="75" width="180" height="15" rx="7" fill="#f0f0f0"/>
+    <rect x="100" y="75" width="144" height="15" rx="7" fill="#4CAF50"/>
+    <text x="290" y="86" font-family="Arial, sans-serif" font-size="12" fill="#333">80%</text>
+    
+    <!-- Riverpod 数据条 -->
+    <text x="20" y="115" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2196F3">Riverpod</text>
+    <rect x="100" y="105" width="180" height="15" rx="7" fill="#f0f0f0"/>
+    <rect x="100" y="105" width="90" height="15" rx="7" fill="#2196F3"/>
+    <text x="290" y="116" font-family="Arial, sans-serif" font-size="12" fill="#333">50%</text>
+    
+    <!-- 进一步增加间隔后的说明文字 -->
+    <text x="20" y="170" font-family="Arial, sans-serif" font-size="11" fill="#666">
+      • Bloc: Event-State模式，所见即所得
+    </text>
+    <text x="20" y="185" font-family="Arial, sans-serif" font-size="11" fill="#666">
+      • Provider: 简单直接，易于理解
+    </text>
+    <text x="20" y="200" font-family="Arial, sans-serif" font-size="11" fill="#666">
+      • Riverpod: 注解魔法，AI理解困难
+    </text>
+  </g>
+  
+  <!-- 底部：综合AI友好度排名 - 纵向布局，增大卡片高度 -->
+  <g transform="translate(50, 340)">
+    <rect width="700" height="250" rx="15" fill="white" opacity="0.95" filter="url(#shadow)"/>
+    <text x="350" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333">
+      综合AI友好度排名
+    </text>
+    
+    <!-- 第一名 Bloc -->
+    <g transform="translate(50, 50)">
+      <circle cx="30" cy="30" r="25" fill="#FFD700"/>
+      <text x="30" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">1</text>
+      <text x="80" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FF9800">Bloc</text>
+      <text x="80" y="42" font-family="Arial, sans-serif" font-size="12" fill="#666">AI代码生成准确率: 92%</text>
+      <text x="300" y="35" font-family="Arial, sans-serif" font-size="14" fill="#333">最适合AI协同开发</text>
+    </g>
+    
+    <!-- 第二名 Riverpod -->
+    <g transform="translate(50, 120)">
+      <circle cx="30" cy="30" r="25" fill="#C0C0C0"/>
+      <text x="30" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">2</text>
+      <text x="80" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2196F3">Riverpod</text>
+      <text x="80" y="42" font-family="Arial, sans-serif" font-size="12" fill="#666">AI代码生成准确率: 78%</text>
+      <text x="300" y="35" font-family="Arial, sans-serif" font-size="14" fill="#333">适合中大型项目AI开发</text>
+    </g>
+    
+    <!-- 第三名 Provider -->
+    <g transform="translate(50, 190)">
+      <circle cx="30" cy="30" r="25" fill="#CD7F32"/>
+      <text x="30" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">3</text>
+      <text x="80" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4CAF50">Provider</text>
+      <text x="80" y="42" font-family="Arial, sans-serif" font-size="12" fill="#666">AI代码生成准确率: 75%</text>
+      <text x="300" y="35" font-family="Arial, sans-serif" font-size="14" fill="#333">适合小型项目AI开发</text>
+    </g>
+  </g>
+  
+  <!-- 底部说明 -->
+  <text x="400" y="630" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" opacity="0.8">
+    数据基于实际项目测试和开发团队反馈统计
+  </text>
+</svg>

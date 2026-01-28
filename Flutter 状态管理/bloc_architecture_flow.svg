@@ -1,0 +1,156 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="uiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#45a049;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blocGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F57C00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="eventGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1976D2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stateGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9C27B0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B1FA2;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+     refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333">
+    Bloc架构数据流 - AI最容易理解的模式
+  </text>
+  
+  <!-- UI层 -->
+  <g transform="translate(50, 100)">
+    <rect width="150" height="100" rx="15" fill="url(#uiGradient)" opacity="0.9"/>
+    <text x="75" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      UI Layer
+    </text>
+    <text x="75" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      Widget
+    </text>
+    <text x="75" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">
+      用户交互
+    </text>
+    <text x="75" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">
+      状态显示
+    </text>
+  </g>
+  
+  <!-- Event -->
+  <g transform="translate(325, 80)">
+    <rect width="150" height="60" rx="10" fill="url(#eventGradient)" opacity="0.9"/>
+    <text x="75" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+      Event
+    </text>
+    <text x="75" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">
+      用户操作事件
+    </text>
+  </g>
+  
+  <!-- Bloc -->
+  <g transform="translate(325, 200)">
+    <rect width="150" height="120" rx="15" fill="url(#blocGradient)" opacity="0.9"/>
+    <text x="75" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Bloc
+    </text>
+    <text x="75" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      业务逻辑
+    </text>
+    <text x="75" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">
+      • 接收Event
+    </text>
+    <text x="75" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">
+      • 处理逻辑
+    </text>
+    <text x="75" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">
+      • 发出State
+    </text>
+  </g>
+  
+  <!-- State -->
+  <g transform="translate(325, 380)">
+    <rect width="150" height="60" rx="10" fill="url(#stateGradient)" opacity="0.9"/>
+    <text x="75" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+      State
+    </text>
+    <text x="75" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">
+      应用状态
+    </text>
+  </g>
+  
+  <!-- Repository -->
+  <g transform="translate(600, 200)">
+    <rect width="150" height="120" rx="15" fill="#607D8B" opacity="0.9"/>
+    <text x="75" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Repository
+    </text>
+    <text x="75" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      数据层
+    </text>
+    <text x="75" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">
+      • API调用
+    </text>
+    <text x="75" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">
+      • 数据缓存
+    </text>
+    <text x="75" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">
+      • 数据转换
+    </text>
+  </g>
+  
+  <!-- 箭头和流程 -->
+  <!-- UI -> Event -->
+  <line x1="200" y1="130" x2="325" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="250" y="115" font-family="Arial, sans-serif" font-size="11" fill="#333">1. 用户操作</text>
+  
+  <!-- Event -> Bloc -->
+  <line x1="400" y1="140" x2="400" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="410" y="175" font-family="Arial, sans-serif" font-size="11" fill="#333">2. 触发事件</text>
+  
+  <!-- Bloc -> Repository -->
+  <line x1="475" y1="260" x2="600" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="520" y="250" font-family="Arial, sans-serif" font-size="11" fill="#333">3. 获取数据</text>
+  
+  <!-- Repository -> Bloc -->
+  <line x1="600" y1="280" x2="475" y2="280" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="520" y="295" font-family="Arial, sans-serif" font-size="11" fill="#333">4. 返回数据</text>
+  
+  <!-- Bloc -> State -->
+  <line x1="400" y1="320" x2="400" y2="380" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="410" y="355" font-family="Arial, sans-serif" font-size="11" fill="#333">5. 发出状态</text>
+  
+  <!-- State -> UI -->
+  <line x1="325" y1="410" x2="200" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="250" y="300" font-family="Arial, sans-serif" font-size="11" fill="#333">6. 更新UI</text>
+  
+  <!-- AI友好特性说明 -->
+  <g transform="translate(50, 480)">
+    <rect width="700" height="100" rx="10" fill="white" stroke="#ddd" stroke-width="1"/>
+    <text x="350" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">
+      为什么Bloc对AI最友好？
+    </text>
+    <text x="20" y="40" font-family="Arial, sans-serif" font-size="12" fill="#666">
+      ✅ <tspan font-weight="bold">显式数据流</tspan>: Event → Bloc → State，每一步都清晰可见
+    </text>
+    <text x="20" y="55" font-family="Arial, sans-serif" font-size="12" fill="#666">
+      ✅ <tspan font-weight="bold">标准化模式</tspan>: 固定的架构模式，AI训练数据丰富
+    </text>
+    <text x="20" y="70" font-family="Arial, sans-serif" font-size="12" fill="#666">
+      ✅ <tspan font-weight="bold">所见即所得</tspan>: 没有隐藏的魔法，所有逻辑都在代码中体现
+    </text>
+    <text x="20" y="85" font-family="Arial, sans-serif" font-size="12" fill="#666">
+      ✅ <tspan font-weight="bold">类型安全</tspan>: 强类型约束，AI更容易理解和生成正确代码
+    </text>
+  </g>
+</svg>

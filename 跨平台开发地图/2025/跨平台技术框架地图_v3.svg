@@ -1,0 +1,151 @@
+<svg width="1200" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flutterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#02569B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0175C2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="reactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#61DAFB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#21759B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="kotlinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7F52FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F88909;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="uniappGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2B9939;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4FC08D;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1200" height="450" fill="url(#bgGradient)"/>
+  
+  <!-- 标题 -->
+  <text x="600" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#1e293b">跨平台开发技术框架地图</text>
+  <text x="600" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#64748b">2025年技术选型指南</text>
+  
+  <!-- 三大分类区域 -->
+  
+  <!-- 自渲染类框架 -->
+  <g>
+    <rect x="50" y="120" width="350" height="280" rx="15" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="225" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">自渲染类框架</text>
+
+    
+    <!-- Flutter -->
+    <rect x="175" y="200" width="100" height="70" rx="10" fill="url(#flutterGradient)" filter="url(#shadow)"/>
+    <text x="225" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Flutter</text>
+    <text x="225" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Dart</text>
+    
+    <!-- 特点描述 -->
+    <text x="225" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">• 性能接近原生</text>
+    <text x="225" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">• UI完全一致</text>
+    <text x="225" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">• 无兼容性bug</text>
+    
+    <!-- 适用场景 -->
+    <text x="225" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#059669">适用场景：</text>
+    <text x="225" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">高性能应用、复杂UI、快速迭代</text>
+    
+    <!-- 优势标签 -->
+    <g>
+      <defs>
+        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect x="245" y="205" width="35" height="15" rx="7" fill="url(#goldGradient)" stroke="#FF8C00" stroke-width="1"/>
+      <!-- 奖杯图标 -->
+      <path d="M 252 208 L 254 208 L 254 210 L 256 210 L 256 208 L 258 208 L 258 211 L 257 211 L 257 213 L 253 213 L 253 211 L 252 211 Z M 253 214 L 257 214 L 257 215 L 253 215 Z" fill="#8B4513"/>
+      <circle cx="255" cy="209" r="1.5" fill="#8B4513"/>
+      <text x="262" y="215" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#8B4513">推荐</text>
+    </g>
+  </g>
+  
+  <!-- 中间层类框架 -->
+  <g>
+    <rect x="425" y="120" width="350" height="280" rx="15" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="600" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">中间层类框架</text>
+
+    
+    <!-- React Native -->
+    <rect x="500" y="200" width="100" height="70" rx="10" fill="url(#reactGradient)" filter="url(#shadow)"/>
+    <text x="550" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">React Native</text>
+    <text x="550" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">JavaScript</text>
+    
+    <!-- .NET MAUI -->
+    <rect x="620" y="200" width="100" height="70" rx="10" fill="#512BD4" filter="url(#shadow)"/>
+    <text x="670" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">.NET MAUI</text>
+    <text x="670" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">C#</text>
+    
+    <!-- 特点描述 -->
+    <text x="600" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">• 开发体验接近Web</text>
+    <text x="600" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">• 调用原生组件</text>
+    <text x="600" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">• 存在桥接损耗</text>
+    
+    <!-- 适用场景 -->
+    <text x="600" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#059669">适用场景：</text>
+    <text x="600" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">Web技术栈团队、企业级应用</text>
+  </g>
+  
+  <!-- 转译类框架 -->
+  <g>
+    <rect x="800" y="120" width="350" height="280" rx="15" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="975" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">转译类框架</text>
+
+    
+    <!-- KMP -->
+    <rect x="875" y="200" width="100" height="70" rx="10" fill="url(#kotlinGradient)" filter="url(#shadow)"/>
+    <text x="925" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">KMP</text>
+    <text x="925" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Kotlin</text>
+    
+    <!-- uni-app x -->
+    <rect x="995" y="200" width="100" height="70" rx="10" fill="url(#uniappGradient)" filter="url(#shadow)"/>
+    <text x="1045" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">uni-app x</text>
+    <text x="1045" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">UTS</text>
+    
+    <!-- 特点描述 -->
+    <text x="975" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">• 性能最接近原生</text>
+    <text x="975" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">• 享受原生生态</text>
+    <text x="975" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">• 无运行时损耗</text>
+    
+    <!-- 适用场景 -->
+    <text x="975" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#059669">适用场景：</text>
+    <text x="975" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">原生API密集调用、小程序+App</text>
+    
+    <!-- 潜力标签 -->
+    <g>
+      <defs>
+        <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#FF8E53;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#FF6B9D;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect x="945" y="205" width="35" height="15" rx="7" fill="url(#starGradient)" stroke="#FF4757" stroke-width="1"/>
+      <!-- 星星图标 -->
+      <path d="M 952 212 L 953 209 L 954 212 L 957 212 L 955 214 L 956 217 L 953 215 L 950 217 L 951 214 L 949 212 Z" fill="#FFE55C"/>
+      <text x="962" y="215" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#8B0000">潜力</text>
+    </g>
+  </g>
+  
+
+  
+  <!-- 箭头标记定义 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151" />
+    </marker>
+  </defs>
+  
+  <!-- 版权信息 -->
+  <text x="1150" y="440" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af">© 2025 跨平台开发地图</text>
+</svg>

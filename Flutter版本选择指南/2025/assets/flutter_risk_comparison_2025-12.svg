@@ -1,0 +1,110 @@
+<svg width="1050" height="520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="safeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34a853;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#137333;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="warningGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbc04;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f9ab00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dangerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ea4335;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d33b2c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="1000" height="500" fill="#f8f9fa"/>
+  <text x="525" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a73e8">Flutter版本风险评估对比</text>
+
+  <rect x="35" y="80" width="180" height="350" rx="10" fill="url(#dangerGradient)" filter="url(#shadow)"/>
+  <text x="125" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Flutter 3.27</text>
+  <text x="125" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">2024年12月</text>
+  <circle cx="125" cy="165" r="25" fill="#ea4335" stroke="white" stroke-width="3"/>
+  <text x="125" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">!</text>
+  <text x="125" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">高风险</text>
+  <text x="125" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">主要问题</text>
+  <text x="125" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• Impeller渲染问题</text>
+  <text x="125" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 启动性能下降</text>
+  <text x="125" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 内存泄漏风险</text>
+  <text x="125" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">使用建议</text>
+  <text x="125" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 避免生产使用</text>
+  <text x="125" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 等待修复版本</text>
+  <text x="125" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 谨慎升级策略</text>
+  <rect x="45" y="380" width="160" height="25" rx="12" fill="white" opacity="0.9"/>
+  <text x="125" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ea4335">推荐指数: ★★☆☆☆</text>
+
+  <rect x="235" y="80" width="180" height="350" rx="10" fill="url(#warningGradient)" filter="url(#shadow)"/>
+  <text x="325" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Flutter 3.29</text>
+  <text x="325" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">2025年2月</text>
+  <circle cx="325" cy="165" r="25" fill="#fbbc04" stroke="white" stroke-width="3"/>
+  <text x="325" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">!</text>
+  <text x="325" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">中等风险</text>
+  <text x="325" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">关注问题</text>
+  <text x="325" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 渲染调整期</text>
+  <text x="325" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 部分API变更</text>
+  <text x="325" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 性能优化中</text>
+  <text x="325" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">使用建议</text>
+  <text x="325" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 开发环境可用</text>
+  <text x="325" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 充分测试验证</text>
+  <text x="325" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 观察社区反馈</text>
+  <rect x="245" y="380" width="160" height="25" rx="12" fill="white" opacity="0.9"/>
+  <text x="325" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f9ab00">推荐指数: ★★★☆☆</text>
+
+  <rect x="435" y="80" width="180" height="350" rx="10" fill="url(#warningGradient)" filter="url(#shadow)"/>
+  <text x="525" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Flutter 3.32</text>
+  <text x="525" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">2025年5月</text>
+  <circle cx="525" cy="165" r="25" fill="#ff6d01" stroke="white" stroke-width="3"/>
+  <text x="525" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">!</text>
+  <text x="525" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">中等风险</text>
+  <text x="525" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">主要优势</text>
+  <text x="525" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 性能显著提升</text>
+  <text x="525" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 稳定性改善</text>
+  <text x="525" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 新特性支持</text>
+  <text x="525" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">使用建议</text>
+  <text x="525" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 推荐升级</text>
+  <text x="525" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 生产环境可用</text>
+  <text x="525" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 长期支持版本</text>
+  <rect x="445" y="380" width="160" height="25" rx="12" fill="white" opacity="0.9"/>
+  <text x="525" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f9ab00">推荐指数: ★★★☆☆</text>
+
+  <rect x="635" y="80" width="180" height="350" rx="10" fill="url(#safeGradient)" filter="url(#shadow)"/>
+  <text x="725" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Flutter 3.35</text>
+  <text x="725" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">2025年8月</text>
+  <circle cx="725" cy="165" r="25" fill="#34a853" stroke="white" stroke-width="3"/>
+  <text x="725" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">✓</text>
+  <text x="725" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">稳定推荐</text>
+  <text x="725" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">主要优势</text>
+  <text x="725" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 问题修复完善</text>
+  <text x="725" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 性能持续提升</text>
+  <text x="725" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 新特性稳定</text>
+  <text x="725" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">适用场景</text>
+  <text x="725" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 新项目首选</text>
+  <text x="725" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 升级目标版本</text>
+  <text x="725" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 长期支持</text>
+  <rect x="645" y="380" width="160" height="25" rx="12" fill="white" opacity="0.9"/>
+  <text x="725" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#34a853">推荐指数: ★★★★★</text>
+
+  <rect x="835" y="80" width="180" height="350" rx="10" fill="url(#warningGradient)" filter="url(#shadow)"/>
+  <text x="925" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Flutter 3.38</text>
+  <text x="925" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">2025年11月</text>
+  <circle cx="925" cy="165" r="25" fill="#34a853" stroke="white" stroke-width="3"/>
+  <text x="925" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">✓</text>
+  <text x="925" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">中低风险</text>
+  <text x="925" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">主要优势</text>
+  <text x="925" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 问题修复</text>
+  <text x="925" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• iOS端UIScene迁移</text>
+  <text x="925" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• Android 16k兼容</text>
+  <text x="925" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">使用建议</text>
+  <text x="925" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 观察稳定性</text>
+  <text x="925" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 等待三方库适配</text>
+  <text x="925" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 保持跟踪</text>
+  <rect x="845" y="380" width="160" height="25" rx="12" fill="white" opacity="0.9"/>
+  <text x="925" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#34a853">推荐指数: ★★★★☆</text>
+
+  <rect x="35" y="440" width="980" height="60" rx="15" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <text x="525" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">版本选择建议</text>
+  <text x="525" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">新项目推荐：3.38 LTS | 稳定项目：3.35 LTS | 避免使用：3.27</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350">
+  <!-- Background -->
+  <rect width="800" height="350" fill="#f8f9fa" />
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#333">Architecture Complexity: Flutter vs Rust UI</text>
+
+  <!-- Left Side: Flutter (Dart + C++) -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="320" height="260" rx="10" fill="#e3f2fd" stroke="#90caf9" stroke-width="2" />
+    <text x="160" y="30" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#1565c0">Current: Flutter</text>
+
+    <!-- Dart Layer -->
+    <rect x="60" y="50" width="200" height="50" rx="5" fill="#42a5f5" stroke="#1e88e5" />
+    <text x="160" y="80" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="white" font-weight="bold">Dart (Framework)</text>
+
+    <!-- Bridge -->
+    <line x1="160" y1="100" x2="160" y2="160" stroke="#ef5350" stroke-width="2" stroke-dasharray="5,5" />
+    <rect x="100" y="115" width="120" height="30" rx="5" fill="#ffebee" stroke="#ef9a9a" />
+    <text x="160" y="135" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" fill="#c62828">Bridge / FFI Overhead</text>
+
+    <!-- Engine Layer -->
+    <rect x="60" y="160" width="200" height="50" rx="5" fill="#78909c" stroke="#546e7a" />
+    <text x="160" y="190" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="white" font-weight="bold">C++ (Engine)</text>
+    
+    <text x="160" y="240" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" fill="#555" font-style="italic">Separated Memory Spaces</text>
+  </g>
+
+  <!-- Right Side: Rust UI -->
+  <g transform="translate(430, 60)">
+    <rect x="0" y="0" width="320" height="260" rx="10" fill="#fff3e0" stroke="#ffcc80" stroke-width="2" />
+    <text x="160" y="30" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#e65100">Hypothetical: Rust UI</text>
+
+    <!-- Rust UI Layer -->
+    <rect x="60" y="50" width="200" height="50" rx="5" fill="#ff7043" stroke="#d84315" />
+    <text x="160" y="80" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="white" font-weight="bold">Rust (Framework)</text>
+
+    <!-- Direct Connection -->
+    <line x1="160" y1="100" x2="160" y2="160" stroke="#2e7d32" stroke-width="4" />
+    <text x="190" y="135" text-anchor="start" font-family="Segoe UI, sans-serif" font-size="12" fill="#2e7d32" font-weight="bold">Direct Calls</text>
+
+    <!-- Engine Layer -->
+    <rect x="60" y="160" width="200" height="50" rx="5" fill="#8d6e63" stroke="#5d4037" />
+    <text x="160" y="190" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="white" font-weight="bold">Rust (Engine)</text>
+
+    <text x="160" y="240" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" fill="#555" font-style="italic">Unified Memory / Zero Cost</text>
+  </g>
+</svg>

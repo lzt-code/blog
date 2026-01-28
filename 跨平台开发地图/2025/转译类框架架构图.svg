@@ -1,0 +1,216 @@
+<svg width="800" height="560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sourceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="compilerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="targetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="kmpGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#5b21b6;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="uniappGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2dd4bf;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#64748b" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="800" height="560" fill="url(#bgGradient)"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">转译类框架架构原理</text>
+  
+  <!-- 转译流程图 -->
+  <g transform="translate(50, 60)">
+    <text x="350" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">转译工作流程</text>
+    
+    <!-- 源代码 -->
+    <g transform="translate(0, 40)">
+      <rect x="0" y="0" width="180" height="80" rx="12" fill="url(#sourceGradient)" filter="url(#shadow)"/>
+      <text x="90" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">源代码</text>
+      <text x="15" y="45" font-family="Arial, sans-serif" font-size="12" fill="white">• Kotlin 业务逻辑</text>
+      <text x="15" y="60" font-family="Arial, sans-serif" font-size="12" fill="white">• UTS 界面代码</text>
+      <text x="15" y="75" font-family="Arial, sans-serif" font-size="12" fill="white">• 统一语法规范</text>
+    </g>
+    
+    <!-- 转译器 -->
+    <g transform="translate(270, 40)">
+      <rect x="0" y="0" width="180" height="80" rx="12" fill="url(#compilerGradient)" filter="url(#shadow)"/>
+      <text x="90" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">转译器</text>
+      <text x="15" y="45" font-family="Arial, sans-serif" font-size="12" fill="white">• 语法分析</text>
+      <text x="15" y="60" font-family="Arial, sans-serif" font-size="12" fill="white">• 代码转换</text>
+      <text x="15" y="75" font-family="Arial, sans-serif" font-size="12" fill="white">• 平台适配</text>
+    </g>
+    
+    <!-- 目标代码 -->
+    <g transform="translate(540, 40)">
+      <rect x="0" y="0" width="180" height="80" rx="12" fill="url(#targetGradient)" filter="url(#shadow)"/>
+      <text x="90" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">原生代码</text>
+      <text x="15" y="45" font-family="Arial, sans-serif" font-size="12" fill="white">• Swift (iOS)</text>
+      <text x="15" y="60" font-family="Arial, sans-serif" font-size="12" fill="white">• Kotlin (Android)</text>
+      <text x="15" y="75" font-family="Arial, sans-serif" font-size="12" fill="white">• 原生性能</text>
+    </g>
+    
+    <!-- 箭头 -->
+    <path d="M 180 80 L 270 80" stroke="#f59e0b" stroke-width="4" marker-end="url(#arrowOrange)"/>
+    <path d="M 450 80 L 540 80" stroke="#10b981" stroke-width="4" marker-end="url(#arrowGreen)"/>
+    
+    <text x="225" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f59e0b">编译时转译</text>
+    <text x="495" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#10b981">生成原生代码</text>
+  </g>
+  
+  <!-- KMP 架构 -->
+  <g transform="translate(50, 180)">
+    <text x="150" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Kotlin Multiplatform</text>
+    
+    <!-- 共享代码层 -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="300" height="50" rx="8" fill="url(#kmpGradient)" filter="url(#shadow)"/>
+      <text x="150" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Kotlin 共享代码</text>
+      <text x="20" y="35" font-family="Arial, sans-serif" font-size="11" fill="white">• 业务逻辑 • 网络层 • 数据模型</text>
+      <text x="180" y="35" font-family="Arial, sans-serif" font-size="11" fill="white">• 工具类 • 算法</text>
+    </g>
+    
+    <!-- 平台特定代码 -->
+    <g transform="translate(0, 100)">
+      <rect x="0" y="0" width="140" height="60" rx="8" fill="url(#targetGradient)" filter="url(#shadow)"/>
+      <text x="70" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">iOS 平台</text>
+      <text x="10" y="35" font-family="Arial, sans-serif" font-size="10" fill="white">• Swift UI</text>
+      <text x="10" y="50" font-family="Arial, sans-serif" font-size="10" fill="white">• iOS 特定 API</text>
+    </g>
+    
+    <g transform="translate(160, 100)">
+      <rect x="0" y="0" width="140" height="60" rx="8" fill="url(#targetGradient)" filter="url(#shadow)"/>
+      <text x="70" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Android 平台</text>
+      <text x="10" y="35" font-family="Arial, sans-serif" font-size="10" fill="white">• Compose UI</text>
+      <text x="10" y="50" font-family="Arial, sans-serif" font-size="10" fill="white">• Android API</text>
+    </g>
+    
+    <!-- 箭头 -->
+    <path d="M 70 80 L 70 100" stroke="#10b981" stroke-width="3" marker-end="url(#arrowGreen)"/>
+    <path d="M 230 80 L 230 100" stroke="#10b981" stroke-width="3" marker-end="url(#arrowGreen)"/>
+    
+    <!-- 特点 -->
+    <g transform="translate(0, 180)">
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">特点：</text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="10" fill="#475569">✓ 业务逻辑共享</text>
+      <text x="0" y="45" font-family="Arial, sans-serif" font-size="10" fill="#475569">✓ 原生性能</text>
+      
+      <text x="150" y="30" font-family="Arial, sans-serif" font-size="10" fill="#475569">✓ Google 官方支持</text>
+      <text x="150" y="45" font-family="Arial, sans-serif" font-size="10" fill="#475569">✓ 渐进式迁移</text>
+    </g>
+  </g>
+  
+  <!-- uni-app x 架构 -->
+  <g transform="translate(450, 180)">
+    <text x="150" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">uni-app x</text>
+    
+    <!-- UTS 代码层 -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="300" height="50" rx="8" fill="url(#uniappGradient)" filter="url(#shadow)"/>
+      <text x="150" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">UTS 统一代码</text>
+      <text x="20" y="35" font-family="Arial, sans-serif" font-size="11" fill="white">• Vue 语法 • TypeScript 类型</text>
+      <text x="180" y="35" font-family="Arial, sans-serif" font-size="11" fill="white">• 统一 API</text>
+    </g>
+    
+    <!-- 转译输出 -->
+    <g transform="translate(0, 100)">
+      <rect x="0" y="0" width="90" height="60" rx="8" fill="url(#targetGradient)" filter="url(#shadow)"/>
+      <text x="45" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Swift</text>
+      <text x="10" y="35" font-family="Arial, sans-serif" font-size="9" fill="white">iOS 原生</text>
+      <text x="10" y="50" font-family="Arial, sans-serif" font-size="9" fill="white">代码</text>
+    </g>
+    
+    <g transform="translate(105, 100)">
+      <rect x="0" y="0" width="90" height="60" rx="8" fill="url(#targetGradient)" filter="url(#shadow)"/>
+      <text x="45" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Kotlin</text>
+      <text x="10" y="35" font-family="Arial, sans-serif" font-size="9" fill="white">Android</text>
+      <text x="10" y="50" font-family="Arial, sans-serif" font-size="9" fill="white">原生代码</text>
+    </g>
+    
+    <g transform="translate(210, 100)">
+      <rect x="0" y="0" width="90" height="60" rx="8" fill="url(#targetGradient)" filter="url(#shadow)"/>
+      <text x="45" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">小程序</text>
+      <text x="10" y="35" font-family="Arial, sans-serif" font-size="9" fill="white">多端</text>
+      <text x="10" y="50" font-family="Arial, sans-serif" font-size="9" fill="white">适配</text>
+    </g>
+    
+    <!-- 箭头 -->
+    <path d="M 45 80 L 45 100" stroke="#10b981" stroke-width="3" marker-end="url(#arrowGreen)"/>
+    <path d="M 150 80 L 150 100" stroke="#10b981" stroke-width="3" marker-end="url(#arrowGreen)"/>
+    <path d="M 255 80 L 255 100" stroke="#10b981" stroke-width="3" marker-end="url(#arrowGreen)"/>
+    
+    <!-- 特点 -->
+    <g transform="translate(0, 180)">
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">特点：</text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="10" fill="#475569">✓ 多端统一</text>
+      <text x="0" y="45" font-family="Arial, sans-serif" font-size="10" fill="#475569">✓ Vue 语法</text>
+      
+      <text x="150" y="30" font-family="Arial, sans-serif" font-size="10" fill="#475569">✓ 国产框架</text>
+      <text x="150" y="45" font-family="Arial, sans-serif" font-size="10" fill="#475569">✓ 小程序支持</text>
+    </g>
+  </g>
+  
+  <!-- 转译类框架核心优势 -->
+  <g transform="translate(50, 420)">
+    <rect x="0" y="0" width="700" height="120" rx="12" fill="rgba(139, 92, 246, 0.1)" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="350" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">转译类框架核心优势</text>
+    
+    <g transform="translate(30, 40)">
+      <circle cx="10" cy="10" r="6" fill="#10b981"/>
+      <text x="25" y="15" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">性能最接近原生</text>
+      <text x="25" y="30" font-family="Arial, sans-serif" font-size="11" fill="#475569">编译为原生代码，无中间层损耗</text>
+    </g>
+    
+    <g transform="translate(250, 40)">
+      <circle cx="10" cy="10" r="6" fill="#3b82f6"/>
+      <text x="25" y="15" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">享受原生生态</text>
+      <text x="25" y="30" font-family="Arial, sans-serif" font-size="11" fill="#475569">直接调用平台所有API</text>
+    </g>
+    
+    <g transform="translate(450, 40)">
+      <circle cx="10" cy="10" r="6" fill="#f59e0b"/>
+      <text x="25" y="15" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">代码复用率高</text>
+      <text x="25" y="30" font-family="Arial, sans-serif" font-size="11" fill="#475569">一套代码生成多平台原生</text>
+    </g>
+    
+    <g transform="translate(140, 75)">
+      <circle cx="10" cy="10" r="6" fill="#8b5cf6"/>
+      <text x="25" y="15" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">渐进式迁移</text>
+      <text x="25" y="30" font-family="Arial, sans-serif" font-size="11" fill="#475569">可以逐步替换现有模块</text>
+    </g>
+    
+    <g transform="translate(350, 75)">
+      <circle cx="10" cy="10" r="6" fill="#ef4444"/>
+      <text x="25" y="15" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">AI 优化转译</text>
+      <text x="25" y="30" font-family="Arial, sans-serif" font-size="11" fill="#475569">转译质量持续提升</text>
+    </g>
+  </g>
+  
+
+  
+  <!-- 箭头标记定义 -->
+  <defs>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,4 L6,2 z" fill="#10b981"/>
+    </marker>
+  </defs>
+</svg>

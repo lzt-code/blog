@@ -1,0 +1,130 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="productionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34a853;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#137333;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="developmentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285f4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a73e8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="newProjectGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9c27b0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6a1b9a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a73e8">不同场景Flutter版本选择指南</text>
+  
+  <!-- 生产环境 -->
+  <rect x="50" y="80" width="250" height="450" rx="15" fill="url(#productionGradient)" filter="url(#shadow)"/>
+  <text x="175" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">🏭 生产环境</text>
+  <text x="175" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">求稳不求新</text>
+  
+  <!-- 生产环境推荐版本 -->
+  <rect x="70" y="150" width="210" height="60" rx="10" fill="white" opacity="0.9"/>
+  <text x="175" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#34a853">首选：Flutter 3.35</text>
+  <text x="175" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">新功能与稳定性的平衡点</text>
+  <text x="175" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">社区验证充分</text>
+  
+  <rect x="70" y="220" width="210" height="50" rx="10" fill="white" opacity="0.8"/>
+  <text x="175" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#34a853">备选：Flutter 3.24</text>
+  <text x="175" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">老当益壮，稳如泰山</text>
+  
+  <!-- 生产环境原则 -->
+  <text x="70" y="295" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">核心原则：</text>
+  <text x="70" y="315" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 用户体验 > 开发体验</text>
+  <text x="70" y="330" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 稳定压倒一切</text>
+  <text x="70" y="345" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 充分测试验证</text>
+  <text x="70" y="360" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 预留回滚方案</text>
+  
+  <text x="70" y="385" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">避免版本：</text>
+  <text x="70" y="405" font-family="Arial, sans-serif" font-size="11" fill="white">✗ Flutter 3.27 (Impeller问题)</text>
+  <text x="70" y="420" font-family="Arial, sans-serif" font-size="11" fill="white">✗ 刚发布的版本</text>
+  <text x="70" y="435" font-family="Arial, sans-serif" font-size="11" fill="white">✗ 未经验证的版本</text>
+  
+  <!-- 升级策略 -->
+  <rect x="70" y="450" width="210" height="70" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="175" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">升级策略</text>
+  <text x="80" y="485" font-family="Arial, sans-serif" font-size="10" fill="white">1. 等待2个月观察期</text>
+  <text x="80" y="500" font-family="Arial, sans-serif" font-size="10" fill="white">2. 小范围灰度测试</text>
+  <text x="80" y="515" font-family="Arial, sans-serif" font-size="10" fill="white">3. 逐步全量发布</text>
+  
+  <!-- 开发环境 -->
+  <rect x="325" y="80" width="250" height="450" rx="15" fill="url(#developmentGradient)" filter="url(#shadow)"/>
+  <text x="450" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">💻 开发环境</text>
+  <text x="450" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">可以激进一点</text>
+  
+  <!-- 开发环境推荐版本 -->
+  <rect x="345" y="150" width="210" height="60" rx="10" fill="white" opacity="0.9"/>
+  <text x="450" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4285f4">推荐：Flutter 3.35</text>
+  <text x="450" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">体验最新功能</text>
+  <text x="450" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">踩坑也值得</text>
+  
+  <!-- 开发环境优势 -->
+  <text x="345" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">优势：</text>
+  <text x="345" y="255" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 体验最新特性</text>
+  <text x="345" y="270" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 提前发现问题</text>
+  <text x="345" y="285" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 为生产环境探路</text>
+  <text x="345" y="300" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 学习新技术</text>
+  
+  <text x="345" y="325" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">注意事项：</text>
+  <text x="345" y="345" font-family="Arial, sans-serif" font-size="11" fill="white">⚠ 随时准备回滚</text>
+  <text x="345" y="360" font-family="Arial, sans-serif" font-size="11" fill="white">⚠ 不在deadline前升级</text>
+  <text x="345" y="375" font-family="Arial, sans-serif" font-size="11" fill="white">⚠ 做好问题记录</text>
+  <text x="345" y="390" font-family="Arial, sans-serif" font-size="11" fill="white">⚠ 关注社区反馈</text>
+  
+  <!-- 开发环境策略 -->
+  <rect x="345" y="410" width="210" height="110" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="450" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">升级策略</text>
+  <text x="355" y="445" font-family="Arial, sans-serif" font-size="10" fill="white">1. 新版本发布后1-2周升级</text>
+  <text x="355" y="460" font-family="Arial, sans-serif" font-size="10" fill="white">2. 先在个人项目试用</text>
+  <text x="355" y="475" font-family="Arial, sans-serif" font-size="10" fill="white">3. 记录遇到的问题</text>
+  <text x="355" y="490" font-family="Arial, sans-serif" font-size="10" fill="white">4. 分享给团队成员</text>
+  <text x="355" y="505" font-family="Arial, sans-serif" font-size="10" fill="white">5. 为生产环境做准备</text>
+  
+  <!-- 新项目 -->
+  <rect x="600" y="80" width="250" height="450" rx="15" fill="url(#newProjectGradient)" filter="url(#shadow)"/>
+  <text x="725" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">🚀 新项目启动</text>
+  <text x="725" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">长期规划</text>
+  
+  <!-- 新项目推荐版本 -->
+  <rect x="620" y="150" width="210" height="60" rx="10" fill="white" opacity="0.9"/>
+  <text x="725" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#9c27b0">最佳选择：Flutter 3.35</text>
+  <text x="725" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">长期支持</text>
+  <text x="725" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">社区活跃</text>
+  
+  <!-- 新项目优势 -->
+  <text x="620" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">选择理由：</text>
+  <text x="620" y="255" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 长期技术支持</text>
+  <text x="620" y="270" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 社区活跃度高</text>
+  <text x="620" y="285" font-family="Arial, sans-serif" font-size="11" fill="white">✓ Bug修复及时</text>
+  <text x="620" y="300" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 新特性丰富</text>
+  <text x="620" y="315" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 未来兼容性好</text>
+  
+  <text x="620" y="340" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">考虑因素：</text>
+  <text x="620" y="360" font-family="Arial, sans-serif" font-size="11" fill="white">• 项目周期长短</text>
+  <text x="620" y="375" font-family="Arial, sans-serif" font-size="11" fill="white">• 团队技术水平</text>
+  <text x="620" y="390" font-family="Arial, sans-serif" font-size="11" fill="white">• 业务复杂程度</text>
+  <text x="620" y="405" font-family="Arial, sans-serif" font-size="11" fill="white">• 上线时间要求</text>
+  
+  <!-- 新项目策略 -->
+  <rect x="620" y="425" width="210" height="95" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="725" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">选择策略</text>
+  <text x="630" y="460" font-family="Arial, sans-serif" font-size="10" fill="white">1. 评估项目生命周期</text>
+  <text x="630" y="475" font-family="Arial, sans-serif" font-size="10" fill="white">2. 考虑团队学习成本</text>
+  <text x="630" y="490" font-family="Arial, sans-serif" font-size="10" fill="white">3. 预留版本升级时间</text>
+  <text x="630" y="505" font-family="Arial, sans-serif" font-size="10" fill="white">4. 关注长期维护性</text>
+  
+  <!-- 底部总结 -->
+  <rect x="50" y="550" width="800" height="40" fill="white" stroke="#e0e0e0" rx="5"/>
+  <text x="70" y="570" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">💡 总结：</text>
+  <text x="140" y="570" font-family="Arial, sans-serif" font-size="12" fill="#666">生产环境求稳定，开发环境可激进，新项目看长远。选择合适的版本，让开发更高效！</text>
+</svg>

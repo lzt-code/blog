@@ -1,0 +1,114 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="startGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285f4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a73e8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="processGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34a853;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#137333;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="warningGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbc04;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f9ab00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dangerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ea4335;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d33b2c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a73e8">Flutter版本选择决策流程图</text>
+  
+  <!-- 开始节点 -->
+  <ellipse cx="450" cy="80" rx="80" ry="25" fill="url(#startGradient)" filter="url(#shadow)"/>
+  <text x="450" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">新版本发布</text>
+  
+  <!-- 箭头1 -->
+  <line x1="450" y1="105" x2="450" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 2个月观察期 -->
+  <rect x="350" y="150" width="200" height="60" rx="10" fill="url(#warningGradient)" filter="url(#shadow)"/>
+  <text x="450" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">2个月观察期</text>
+  <text x="450" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">观察社区反馈</text>
+  <text x="450" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">查看bug列表</text>
+  
+  <!-- 箭头2 -->
+  <line x1="450" y1="210" x2="450" y2="245" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 判断节点 -->
+  <polygon points="450,250 500,280 450,310 400,280" fill="url(#processGradient)" filter="url(#shadow)"/>
+  <text x="450" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">是否有严重</text>
+  <text x="450" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">问题？</text>
+  
+  <!-- 左分支 - 有问题 -->
+  <line x1="400" y1="280" x2="250" y2="280" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="325" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ea4335" font-weight="bold">Y</text>
+  
+  <rect x="150" y="250" width="200" height="60" rx="10" fill="url(#dangerGradient)" filter="url(#shadow)"/>
+  <text x="250" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">继续等待</text>
+  <text x="250" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">等待修复版本</text>
+  <text x="250" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">或使用稳定版本</text>
+  
+  <!-- 右分支 - 没问题 -->
+  <line x1="500" y1="280" x2="650" y2="280" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="575" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#34a853" font-weight="bold">N</text>
+  
+  <!-- 分环境测试流程 -->
+  <rect x="550" y="250" width="200" height="60" rx="10" fill="url(#processGradient)" filter="url(#shadow)"/>
+  <text x="650" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">分环境测试</text>
+  <text x="650" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">开发→测试→生产</text>
+  <text x="650" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">逐步推进</text>
+  
+  <!-- 箭头3 -->
+  <line x1="650" y1="310" x2="650" y2="345" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 开发环境 -->
+  <rect x="550" y="355" width="200" height="50" rx="8" fill="#4285f4" filter="url(#shadow)"/>
+  <text x="650" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">1. 开发环境测试</text>
+  <text x="650" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">可以激进，踩坑也值得</text>
+  
+  <!-- 箭头4 -->
+  <line x1="650" y1="405" x2="650" y2="430" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 测试环境 -->
+  <rect x="550" y="440" width="200" height="50" rx="8" fill="#fbbc04" filter="url(#shadow)"/>
+  <text x="650" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">2. 测试环境验证</text>
+  <text x="650" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">充分测试，记录问题</text>
+  
+  <!-- 箭头5 -->
+  <line x1="650" y1="490" x2="650" y2="515" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 生产环境 -->
+  <rect x="550" y="525" width="200" height="50" rx="8" fill="#34a853" filter="url(#shadow)"/>
+  <text x="650" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">3. 生产环境部署</text>
+  <text x="650" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">稳定压倒一切</text>
+  
+  <!-- 左侧补充说明 -->
+  <rect x="50" y="350" width="180" height="120" rx="8" fill="white" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="140" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">关键原则</text>
+  <text x="140" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">• 不要当小白鼠</text>
+  <text x="140" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">• 预留回滚时间</text>
+  <text x="140" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">• 用户体验优先</text>
+  <text x="140" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">• 分批次升级</text>
+  <text x="140" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">• 监控异常指标</text>
+  
+  <!-- 右侧风险提示 -->
+  <rect x="780" y="350" width="110" height="120" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="835" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e65100">⚠️ 风险提示</text>
+  <text x="790" y="390" font-family="Arial, sans-serif" font-size="9" fill="#bf360c">避免在deadline</text>
+  <text x="790" y="405" font-family="Arial, sans-serif" font-size="9" fill="#bf360c">前升级版本</text>
+  <text x="790" y="425" font-family="Arial, sans-serif" font-size="9" fill="#bf360c">准备快速回滚</text>
+  <text x="790" y="440" font-family="Arial, sans-serif" font-size="9" fill="#bf360c">方案</text>
+  <text x="790" y="460" font-family="Arial, sans-serif" font-size="9" fill="#bf360c">关注社区反馈</text>
+</svg>

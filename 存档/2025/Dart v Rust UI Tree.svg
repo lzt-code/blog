@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" style="background-color: white;">
+  <!-- Backgrounds -->
+  <rect x="0" y="0" width="400" height="450" fill="#E3F2FD" fill-opacity="0.3"/>
+  <rect x="400" y="0" width="400" height="450" fill="#FFF3E0" fill-opacity="0.3"/>
+
+  <style>
+    .title { font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-family: 'Segoe UI', sans-serif; font-size: 14px; fill: #546E7A; text-anchor: middle; font-style: italic;}
+    .label { font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; text-anchor: middle; }
+    .code { font-family: 'Consolas', monospace; font-size: 12px; fill: #D84315; text-anchor: middle; }
+    .note { font-family: 'Segoe UI', sans-serif; font-size: 12px; fill: #fff; text-anchor: middle; font-weight: bold;}
+  </style>
+  
+  <!-- Divider -->
+  <line x1="400" y1="20" x2="400" y2="430" stroke="#B0BEC5" stroke-width="1" stroke-dasharray="5,5" />
+  
+  <!-- === DART SECTION === -->
+  <text x="200" y="50" class="title" fill="#0277bd">Dart (GC)</text>
+  <text x="200" y="75" class="subtitle">"Just point to each other, I'll clean up."</text>
+  
+  <g transform="translate(200, 240)">
+    <!-- Parent Circle -->
+    <circle cx="0" cy="-70" r="40" fill="#B3E5FC" stroke="#0277BD" stroke-width="3"/>
+    <text x="0" y="-65" class="label" fill="#01579B">Parent</text>
+    <text x="0" y="-130" class="code" fill="#01579B">Widget</text>
+
+    <!-- Child Circle -->
+    <circle cx="0" cy="70" r="40" fill="#B3E5FC" stroke="#0277BD" stroke-width="3"/>
+    <text x="0" y="75" class="label" fill="#01579B">Child</text>
+    
+    <!-- Arrows (Curved) -->
+    <!-- Parent -> Child -->
+    <path d="M -30 -40 Q -70 0 -30 40" fill="none" stroke="#0288D1" stroke-width="3" marker-end="url(#arrowDart)"/>
+    <text x="-75" y="5" class="code" fill="#0288D1" text-anchor="end">child: widget</text>
+    
+    <!-- Child -> Parent -->
+    <path d="M 30 40 Q 70 0 30 -40" fill="none" stroke="#0288D1" stroke-width="3" marker-end="url(#arrowDart)"/>
+    <text x="75" y="5" class="code" fill="#0288D1" text-anchor="start">context.parent</text>
+  </g>
+  
+  <!-- GC Badge -->
+  <g transform="translate(200, 400)">
+    <rect x="-60" y="-15" width="120" height="30" rx="15" fill="#4CAF50"/>
+    <text x="0" y="5" class="note">GC OK</text>
+  </g>
+
+
+  <!-- === RUST SECTION === -->
+  <text x="600" y="50" class="title" fill="#E65100">Rust (Ownership)</text>
+  <text x="600" y="75" class="subtitle">"Who owns whom? The cycle must break."</text>
+  
+  <g transform="translate(600, 240)">
+    <!-- Parent Box -->
+    <rect x="-50" y="-110" width="100" height="80" rx="8" fill="#FFE0B2" stroke="#E65100" stroke-width="3"/>
+    <text x="0" y="-75" class="label" fill="#BF360C">Parent</text>
+    <text x="0" y="-55" class="code" fill="#BF360C">Struct</text>
+    
+    <!-- Child Box -->
+    <rect x="-50" y="30" width="100" height="80" rx="8" fill="#FFE0B2" stroke="#E65100" stroke-width="3"/>
+    <text x="0" y="65" class="label" fill="#BF360C">Child</text>
+    <text x="0" y="85" class="code" fill="#BF360C">Struct</text>
+    
+    <!-- Arrows -->
+    <!-- Ownership (Strong) -->
+    <line x1="-20" y1="-30" x2="-20" y2="30" stroke="#E65100" stroke-width="3" marker-end="url(#arrowRust)"/>
+    <text x="-25" y="0" class="code" fill="#E65100" text-anchor="end" style="font-size: 11px;">Owns</text>
+
+    <!-- Weak Reference (Dashed) -->
+    <path d="M 20 30 L 20 -23" fill="none" stroke="#E65100" stroke-width="3" stroke-dasharray="5,3" marker-end="url(#arrowRust)"/>
+    <text x="25" y="0" class="code" fill="#E65100" text-anchor="start" style="font-size: 11px;">Weak Ref</text>
+  </g>
+  
+  <!-- Complexity Badge -->
+  <g transform="translate(600, 400)">
+    <rect x="-110" y="-15" width="220" height="30" rx="5" fill="#F57C00"/>
+    <text x="0" y="5" class="note">Type: Arc&lt;RefCell&lt;T&gt;&gt;</text>
+  </g>
+
+  <!-- Markers -->
+  <defs>
+    <marker id="arrowDart" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#0288D1" />
+    </marker>
+    <marker id="arrowRust" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#E65100" />
+    </marker>
+  </defs>
+</svg>

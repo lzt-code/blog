@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter 支持的操作系统</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #bbdefb 100%);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+            padding: 40px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #01579b;
+            margin-bottom: 40px;
+            font-size: 28px;
+            font-weight: 700;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .platforms-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .platform-card {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            flex: 1;
+            min-width: 120px;
+            max-width: 150px;
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        }
+        
+        .platform-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        .platform-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0288d1;
+            margin-bottom: 5px;
+        }
+        
+        .legend {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        .legend-text {
+            color: #0288d1;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flutter 支持的操作系统平台</h1>
+        
+        <div class="platforms-row">
+            <div class="platform-card">
+                <div class="platform-icon">📱</div>
+                <div class="platform-name">iOS</div>
+            </div>
+            
+            <div class="platform-card">
+                <div class="platform-icon">🤖</div>
+                <div class="platform-name">Android</div>
+            </div>
+            
+            <div class="platform-card">
+                <div class="platform-icon">🌐</div>
+                <div class="platform-name">Web</div>
+            </div>
+            
+            <div class="platform-card">
+                <div class="platform-icon">🪟</div>
+                <div class="platform-name">Windows</div>
+            </div>
+            
+            <div class="platform-card">
+                <div class="platform-icon">🍎</div>
+                <div class="platform-name">macOS</div>
+            </div>
+            
+            <div class="platform-card">
+                <div class="platform-icon">🐧</div>
+                <div class="platform-name">Linux</div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-text">
+                使用 Flutter 编写一次代码，即可在所有这些平台上运行原生应用
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg width="650" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="500" fill="#f8f9fa"/>
+  <text x="325" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333">项目技术分布</text>
+  <g transform="translate(300,250)">
+    <path d="M 0 0 L 120 0 A 120 120 0 1 1 -108.116 -52.066 Z" fill="#2196F3" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 0 0 L -108.116 -52.066 A 120 120 0 0 1 74.819 -93.820 Z" fill="#4CAF50" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 0 0 L 74.819 -93.820 A 120 120 0 0 1 120 0 Z" fill="#FF5722" stroke="#ffffff" stroke-width="2"/>
+
+    
+    <text x="-100" y="100" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#2196F3">Flutter 4（57%）</text>
+
+    
+    <text x="-110" y="-80" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#4CAF50">原生 2（29%）</text>
+
+    
+    <text x="130" y="-45" text-anchor="start" font-family="Arial, sans-serif" font-size="14" fill="#FF5722">鸿蒙 1（14%）</text>
+  </g>
+  
+  
+</svg>
