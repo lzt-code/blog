@@ -44,7 +44,7 @@
 专注于移动端技术研究，分享最硬核的技术干货与行业洞察。
 
 - 📢 公众号：**[Flutter 程序员老刘]**
-- 📧 微信：laoliu_dev （备注：GitHub 读者）
+- 💬 微信：laoliu_dev （备注：GitHub 读者）
 
 ![扫码联系老刘](存档/2025/weixin_qr.png)
 
