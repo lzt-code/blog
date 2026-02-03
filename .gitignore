@@ -6,11 +6,11 @@
 CLAUDE.md
 
 # Scripts & Internal Tools
-script/
-scripts/
 temp/
 
 # System Files
+__pycache__/
+*.pyc
 .DS_Store
 Thumbs.db
 *.log
