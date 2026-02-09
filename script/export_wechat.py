@@ -6,6 +6,7 @@ import subprocess
 # 导入新提取的 SVG 转换逻辑
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from svg_to_png import batch_convert_svg_to_png
+from mermaid_to_png import process_mermaid_content
 
 # ================= 配置区域 =================
 # 请在此处填入你的 GitHub 信息
@@ -100,6 +101,9 @@ def convert_to_wechat_format(file_path):
         print("请打开 script/export_wechat.py 修改配置区域。")
         print("-" * 50)
 
+    # --- 0.5 扫描并转换 Mermaid ---
+    content, mermaid_pngs = process_mermaid_content(content, file_path)
+
     # --- 1. 扫描并转换 SVG ---
     matches = re.findall(r'!\[(.*?)\]\((.*?)\)', content)
     svgs_to_convert = []
@@ -118,8 +122,9 @@ def convert_to_wechat_format(file_path):
         generated_pngs = batch_convert_svg_to_png(svgs_to_convert)
                 
     # --- 1.5 自动提交 Git ---
-    if generated_pngs:
-        run_git_commands(generated_pngs)
+    all_generated_files = generated_pngs + mermaid_pngs
+    if all_generated_files:
+        run_git_commands(all_generated_files)
 
     # --- 2. 替换链接 ---
     # 正则替换：匹配 ![](./xxx) 或 ![](xxx) 这种相对路径
