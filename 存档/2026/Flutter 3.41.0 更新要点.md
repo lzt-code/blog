@@ -15,9 +15,9 @@
 
 如果希望了解更多详情，建议查看Flutter官方发布日志： https://docs.flutter.dev/release/release-notes/release-notes-3.41.0
 
-## 1. 核心要点解析
+## 一、 核心要点解析
 
-### 2.1 Flutter sdk 与 UI库解耦 
+### 1. Flutter sdk 与 UI库解耦 
 
 持续推进将 Material 和 Cupertino 库迁移为独立包。
 
@@ -27,7 +27,7 @@ UI 组件与基础设施分离早该如此了。
 
 因为升级Flutter版本总是会对当前的稳定性造成一定的影响，但是升级组件库相对来说风险更可控。
 
-### 2.2 平台特定资源 (Platform-specific assets) 
+### 2. 平台特定资源 (Platform-specific assets) 
 
 在 pubspec.yaml 中可以指定资源适用的平台，从而优化包体积（例如在移动端构建中排除桌面端的大型资源）。
 
@@ -49,7 +49,7 @@ flutter:
 实际工程中要小心评估你的应用场景，很多时候手机和桌面端的业务逻辑是不完全一样的。
 
 
-### 2.3  Add-to-App 增强
+### 3. Add-to-App 增强
 
 嵌入原生应用的 Flutter 视图现在支持根据内容 自动调整大小 （不再需要固定尺寸）。
 
@@ -69,19 +69,19 @@ flutter:
 
 这也是Flutter被广泛应用的一个重要原因。
 
-### 2.4 桌面端 (Desktop)
+### 4. 桌面端 (Desktop)
 
 简单来说就是还在努力推进，逐步补全桌面端的拼图。
 
-### 2.5 Dart 升级到 3.11.0
+### 5. Dart 升级到 3.11.0
 
 有一个Breaking Change
 
 dart2wasm 不再支持 dart:js_util，必须迁移到 dart:js_interop ，否则会报错。
 
-## 3. 避坑指南
+## 二、 避坑指南
 
-### 3.1 AGP 9：暂时别升级
+### 1. AGP 9：暂时别升级
 
 虽然 AGP (Android Gradle Plugin) 9.0 带来了构建性能的提升，但**老刘强烈建议大家暂时不要升级**。
 
@@ -93,7 +93,7 @@ dart2wasm 不再支持 dart:js_util，必须迁移到 dart:js_interop ，否则�
 
 建议等官方的迁移脚本和第三方插件生态都跟上之后，我们再从容升级。
 
-### 3.2 SwiftPM：老项目需谨慎
+### 2. SwiftPM：老项目需谨慎
 
 Flutter引入Swift Package Manager (SPM)支持是为了最终摆脱 CocoaPods 和 Ruby 环境的依赖，这是 iOS 开发的正确方向。
 
@@ -102,7 +102,7 @@ Flutter引入Swift Package Manager (SPM)支持是为了最终摆脱 CocoaPods �
 目前 SPM 的支持还处于"混合模式"阶段，很多老插件并没有适配 SPM (缺少 Package.swift)，这会导致项目同时依赖 CocoaPods 和 SPM，极易产生依赖冲突和 Xcode 配置混乱。
 
 
-## 4. 总结
+## 三、 总结
 
 Flutter 3.41 是一个承上启下的版本，为 2026 年的稳定迭代打好了地基。
 
