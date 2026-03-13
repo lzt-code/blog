@@ -1,0 +1,71 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" rx="15" ry="15"/>
+  
+  <!-- Left Section: Traditional Standard -->
+  <g transform="translate(60, 50)">
+    <rect width="310" height="300" fill="#fff" stroke="#ccc" stroke-width="2" rx="15"/>
+    <text x="155" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#555">过去的标配</text>
+    
+    <!-- Doc Icon -->
+    <g transform="translate(30, 20)">
+      <path d="M100,60 h50 v60 h-50 z M110,75 h30 M110,85 h30 M110,95 h20" fill="none" stroke="#4285F4" stroke-width="3"/>
+      <text x="125" y="145" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#4285F4">官方文档</text>
+    </g>
+    
+    <!-- User Icon -->
+    <g transform="translate(30, 40)">
+      <circle cx="125" cy="180" r="12" fill="#555"/>
+      <path d="M105,215 q20,-25 40,0" stroke="#555" stroke-width="3" fill="none"/>
+      <text x="125" y="235" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#777">开发者 (Human)</text>
+    </g>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M375,200 L405,200" stroke="#999" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999" />
+    </marker>
+  </defs>
+  <text x="390" y="185" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#999">进化为</text>
+
+  <!-- Right Section: Future Standard -->
+  <g transform="translate(430, 50)">
+    <rect width="310" height="300" fill="#eef6ff" stroke="#4285F4" stroke-width="2" rx="15"/>
+    <text x="155" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#4285F4">未来的新标配</text>
+    
+    <!-- Doc + Skills Icons -->
+    <g transform="translate(30, 20)">
+      <!-- Doc -->
+      <g transform="translate(-40, 0)">
+        <path d="M100,60 h40 v50 h-40 z M108,72 h24 M108,80 h24 M108,88 h16" fill="none" stroke="#4285F4" stroke-width="2.5"/>
+        <text x="120" y="125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#4285F4">官方文档</text>
+      </g>
+
+      <!-- Plus Sign -->
+      <text x="125" y="90" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#34A853">+</text>
+
+      <!-- Skills Icon (AI) -->
+      <g transform="translate(50, 0)">
+        <rect x="90" y="60" width="60" height="50" rx="5" fill="none" stroke="#EA4335" stroke-width="2.5"/>
+        <circle cx="105" cy="80" r="3" fill="#EA4335"/>
+        <circle cx="135" cy="80" r="3" fill="#EA4335"/>
+        <path d="M110,95 q10,5 20,0" stroke="#EA4335" stroke-width="2" fill="none"/>
+        <text x="120" y="125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#EA4335">官方 Skills</text>
+      </g>
+    </g>
+    
+    <!-- Icons at bottom -->
+    <g transform="translate(30, 30)">
+      <!-- Human -->
+      <circle cx="90" cy="180" r="12" fill="#555"/>
+      <path d="M70,215 q20,-25 40,0" stroke="#555" stroke-width="3" fill="none"/>
+      <!-- Robot -->
+      <rect x="150" y="170" width="24" height="24" rx="5" fill="#EA4335"/>
+      <path d="M142,215 q20,-25 40,0" stroke="#EA4335" stroke-width="3" fill="none"/>
+      
+      <text x="125" y="245" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#777">Human + AI 协作</text>
+    </g>
+  </g>
+</svg>
