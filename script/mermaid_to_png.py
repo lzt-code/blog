@@ -44,7 +44,7 @@ def process_mermaid_content(content, md_file_path):
                 <!DOCTYPE html>
                 <html>
                 <head>
-                    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+                    <script src="https://gcore.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
                     <script>
                         mermaid.initialize({{ 
                             startOnLoad: true,

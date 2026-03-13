@@ -16,6 +16,10 @@ IMAGE_REPO_NAME = "blog-images"
 IMAGE_REPO_BRANCH = "main"
 IMAGE_REPO_URL = f"https://github.com/{GITHUB_USER}/{IMAGE_REPO_NAME}.git"
 
+# CDN 域名配置 (可选用: gcore.jsdelivr.net, fastly.jsdelivr.net, cdn.jsdelivr.net)
+CDN_DOMAIN = "gcore.jsdelivr.net"
+
+
 # 图床仓库本地路径
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 BLOG_ROOT = os.path.dirname(CURRENT_DIR)
@@ -201,8 +205,8 @@ def convert_to_wechat_format(file_path):
         # 这里可以选择是否继续替换链接，建议继续，因为用户可能稍后手动 push
 
     # --- 6. 替换链接为 CDN 地址 ---
-    # 格式: https://fastly.jsdelivr.net/gh/user/repo@branch/img/filename
-    cdn_prefix = f"https://fastly.jsdelivr.net/gh/{GITHUB_USER}/{IMAGE_REPO_NAME}@{IMAGE_REPO_BRANCH}/img/"
+    # 格式: https://{CDN_DOMAIN}/gh/user/repo@branch/img/filename
+    cdn_prefix = f"https://{CDN_DOMAIN}/gh/{GITHUB_USER}/{IMAGE_REPO_NAME}@{IMAGE_REPO_BRANCH}/img/"
     
     def replace_link(match):
         alt_text = match.group(1)
