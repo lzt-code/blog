@@ -25,38 +25,6 @@ WORKSPACE_ROOT = os.path.dirname(BLOG_ROOT)
 IMAGE_REPO_LOCAL_PATH = os.path.join(WORKSPACE_ROOT, IMAGE_REPO_NAME)
 # ===========================================
 
-def run_git_commands(files_to_add):
-    """
-    自动执行 git add 和 git commit -m "Auto convert svg to png"
-    """
-    if not files_to_add:
-        return
-
-    print("\n正在自动提交生成的 PNG 文件到 Git...")
-    
-    try:
-        # 1. git add
-        # 注意：文件路径可能包含空格，需要小心处理，subprocess.run 接受列表参数比较安全
-        cmd_add = ["git", "add"] + files_to_add
-        subprocess.run(cmd_add, check=True)
-        print(f"  已添加 {len(files_to_add)} 个文件到暂存区")
-        
-        # 2. git commit
-        # 检查是否有变更需要提交
-        status_result = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
-        if status_result.stdout.strip():
-            cmd_commit = ["git", "commit", "-m", "Auto convert svg to png"]
-            subprocess.run(cmd_commit, check=True)
-            print("  已完成 Git 提交")
-            print("  [重要] 请记得执行 'git push' 将更改推送到远程仓库！")
-        else:
-            print("  暂存区没有变化，跳过提交")
-            
-    except subprocess.CalledProcessError as e:
-        print(f"  Git 操作失败: {e}")
-    except Exception as e:
-        print(f"  Git 操作出错: {e}")
-
 def upload_images_and_verify(image_repo_path, files_to_upload):
     """
     将文件复制到图床仓库并提交
@@ -230,10 +198,7 @@ def convert_to_wechat_format(file_path):
     # 更新 content 变量，供后续生成预览使用
     content = new_source_content
                 
-    # --- 1.5 自动提交 Git (当前仓库) ---
     all_generated_files = generated_pngs + mermaid_pngs
-    if all_generated_files:
-        run_git_commands(all_generated_files)
 
     # --- 1.6 上传图片到图床并验证 ---
     if all_generated_files:
@@ -277,7 +242,18 @@ def convert_to_wechat_format(file_path):
     print("="*20 + " 转换成功 " + "="*20)
     print(f"已保存到: {output_path}")
     print("="*50)
-    print(f"\n[提示] 请确保你已经将图片推送到 GitHub: https://github.com/{GITHUB_USER}/{REPO_NAME}")
+    print(f"\n[提示] 请确保你已经将图片推送到 GitHub: https://github.com/{GITHUB_USER}/{IMAGE_REPO_NAME}")
+
+    # 清理本地临时生成的 PNG 图片
+    if all_generated_files:
+        print("\n正在清理本地临时生成的 PNG 图片...")
+        for file in all_generated_files:
+            try:
+                if os.path.exists(file):
+                    os.remove(file)
+                    print(f"  已清理: {file}")
+            except Exception as e:
+                print(f"  清理失败 {file}: {e}")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
