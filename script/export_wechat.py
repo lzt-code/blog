@@ -3,6 +3,7 @@ import re
 import sys
 import os
 import subprocess
+import hashlib
 
 # 导入新提取的 SVG 转换逻辑
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
@@ -25,6 +26,25 @@ WORKSPACE_ROOT = os.path.dirname(BLOG_ROOT)
 IMAGE_REPO_LOCAL_PATH = os.path.join(WORKSPACE_ROOT, IMAGE_REPO_NAME)
 # ===========================================
 
+def get_file_hash(file_path):
+    """计算文件的 MD5 哈希值"""
+    hasher = hashlib.md5()
+    with open(file_path, 'rb') as f:
+        buf = f.read()
+        hasher.update(buf)
+    return hasher.hexdigest()
+
+def get_unique_filename(file_path):
+    """生成唯一文件名: filename_hash.ext"""
+    if not os.path.exists(file_path):
+        return os.path.basename(file_path)
+        
+    file_hash = get_file_hash(file_path)
+    base_name = os.path.basename(file_path)
+    name, ext = os.path.splitext(base_name)
+    # 使用前8位哈希即可
+    return f"{name}_{file_hash[:8]}{ext}"
+
 def upload_images_and_verify(image_repo_path, files_to_upload):
     """
     将文件复制到图床仓库并提交
@@ -44,9 +64,17 @@ def upload_images_and_verify(image_repo_path, files_to_upload):
     added_count = 0
     for src_path in files_to_upload:
         if os.path.exists(src_path):
-            file_name = os.path.basename(src_path)
-            # 扁平化存储：直接放在 img/ 下，注意同名文件覆盖问题
+            # 使用内容哈希生成唯一文件名，防止重名覆盖
+            file_name = get_unique_filename(src_path)
+            # 扁平化存储：直接放在 img/ 下
             dst_path = os.path.join(target_dir, file_name)
+            
+            # 检查目标文件是否已存在且内容一致
+            if os.path.exists(dst_path):
+                # 如果文件已存在，可能是之前上传过，或者哈希碰撞（极小概率）
+                # 既然是基于内容的哈希，内容应该是一样的，所以可以跳过，或者覆盖
+                pass
+            
             shutil.copy2(src_path, dst_path)
             added_count += 1
             print(f"  复制到图床: {file_name}")
@@ -171,15 +199,18 @@ def convert_to_wechat_format(file_path):
             
         # 如果是 SVG，替换后缀并增加 CDN 前缀
         if link.lower().endswith('.svg'):
-            local_rel_path, _ = resolve_local_path(link, file_path)
-            if local_rel_path:
-                # 替换后缀
-                png_filename = os.path.basename(local_rel_path)
-                png_filename = os.path.splitext(png_filename)[0] + ".png"
+            local_rel_path, abs_path = resolve_local_path(link, file_path)
+            if local_rel_path and abs_path:
+                # 对应的 PNG 路径
+                png_abs_path = os.path.splitext(abs_path)[0] + ".png"
                 
-                # 拼接 CDN (使用扁平化的文件名)
-                full_url = cdn_prefix + png_filename
-                return f"![{alt}]({full_url})"
+                if os.path.exists(png_abs_path):
+                    # 获取唯一文件名
+                    unique_name = get_unique_filename(png_abs_path)
+                    
+                    # 拼接 CDN (使用扁平化的唯一文件名)
+                    full_url = cdn_prefix + unique_name
+                    return f"![{alt}]({full_url})"
             
         return match.group(0)
 
@@ -220,8 +251,31 @@ def convert_to_wechat_format(file_path):
             
         # 检查是否是 SVG，如果是，替换为 PNG 后缀
         filename = os.path.basename(local_rel_path)
+        target_abs_path = abs_path
+        
         if filename.lower().endswith('.svg'):
-            filename = os.path.splitext(filename)[0] + ".png"
+            # 尝试寻找对应的 PNG 文件
+            png_path = os.path.splitext(abs_path)[0] + ".png"
+            if os.path.exists(png_path):
+                target_abs_path = png_path
+            else:
+                # 如果找不到 PNG，可能转换失败，暂时还是用 svg 名字（虽然可能无法访问）
+                filename = os.path.splitext(filename)[0] + ".png"
+        
+        # 使用唯一文件名
+        if os.path.exists(target_abs_path):
+            # 仅对我们生成的(将要上传的)文件使用哈希文件名
+            # 对于手动引用的本地图片，如果不在上传列表中，修改文件名会导致链接失效(因为没有上传)
+            if target_abs_path in all_generated_files:
+                filename = get_unique_filename(target_abs_path)
+            else:
+                filename = os.path.basename(target_abs_path)
+                if filename.lower().endswith('.svg'):
+                    filename = os.path.splitext(filename)[0] + ".png"
+        else:
+            # 如果文件不存在，回退到原始 basename (可能不含 hash)
+            if filename.lower().endswith('.svg'):
+                 filename = os.path.splitext(filename)[0] + ".png"
             
         # 拼接完整 CDN 链接 (扁平化)
         full_url = cdn_prefix + filename
