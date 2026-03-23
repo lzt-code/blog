@@ -9,7 +9,8 @@
 ### [Flutter 版本选择指南](Flutter%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9%E6%8C%87%E5%8D%97/)
 每月更新的 Flutter 版本避坑与选型建议，助你做出最稳健的技术决策。
 
-- [**最新：2026年1月版**](Flutter%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9%E6%8C%87%E5%8D%97/2026-01.md)
+- [**最新：2026年2月版**](Flutter%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9%E6%8C%87%E5%8D%97/2026-02.md)
+- [2026年1月版](Flutter%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9%E6%8C%87%E5%8D%97/2026-01.md)
 - [2025年12月版](Flutter%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9%E6%8C%87%E5%8D%97/2025/2025-12.md)
 - [2025年11月版](Flutter%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9%E6%8C%87%E5%8D%97/2025/2025-11.md)
 
@@ -32,6 +33,7 @@
 这里收录了往期发布的高质量技术文章，涵盖 Android 新特性、鸿蒙适配、AI 编程等热门话题。
 
 ### 🔥 热门话题
+- [2026春招Flutter岗位为何变少？我看到的3个招聘逻辑变化](%E5%AD%98%E6%A1%A3/2026/2026%E6%98%A5%E6%8B%9BFlutter%E5%B2%97%E4%BD%8D%E4%B8%BA%E4%BD%95%E5%8F%98%E5%B0%91%EF%BC%9F%E6%88%91%E7%9C%8B%E5%88%B0%E7%9A%843%E4%B8%AA%E6%8B%9B%E8%81%98%E9%80%BB%E8%BE%91%E5%8F%98%E5%8C%96.md)
 - [2026年了，为什么我建议你放弃纯原生开发？](%E5%AD%98%E6%A1%A3/2026/2026%E5%B9%B4%E4%BA%86%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%BB%BA%E8%AE%AE%E4%BD%A0%E6%94%BE%E5%BC%83%E7%BA%AF%E5%8E%9F%E7%94%9F%E5%BC%80%E5%8F%91%EF%BC%9F.md)
 - [ArkUI 6.0 跨平台能否取代 Flutter？](%E5%AD%98%E6%A1%A3/2026/ArkUI_6.0_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E8%83%BD%E5%90%A6%E5%8F%96%E4%BB%A3_Flutter.md)
 - [Flutter 3.41.0 更新要点](%E5%AD%98%E6%A1%A3/2026/Flutter%203.41.0%20%E6%9B%B4%E6%96%B0%E8%A6%81%E7%82%B9.md)
@@ -43,6 +45,8 @@
 
 ### 🤖 AI 与编程
 - [Android Studio Otter 3 发布：日常开发选AS还是Cursor？](%E5%AD%98%E6%A1%A3/2026/Android%20Studio%20Otter%203%20%E5%8F%91%E5%B8%83%EF%BC%9A%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91%E9%80%89AS%E8%BF%98%E6%98%AFCursor%EF%BC%9F.md)
+- [AI写Flutter代码比我快100倍，我慌了吗？](%E5%AD%98%E6%A1%A3/2026/AI%E5%86%99Flutter%E4%BB%A3%E7%A0%81%E6%AF%94%E6%88%91%E5%BF%AB100%E5%80%8D%EF%BC%8C%E6%88%91%E6%85%8C%E4%BA%86%E5%90%97%EF%BC%9F.md)
+- [Flutter 官方Skill发布，对开发者意味着什么？](%E5%AD%98%E6%A1%A3/2026/Flutter%20%E5%AE%98%E6%96%B9Skill%E5%8F%91%E5%B8%83%EF%BC%8C%E5%AF%B9%E5%BC%80%E5%8F%91%E8%80%85%E6%84%8F%E5%91%B3%E7%9D%80%E4%BB%80%E4%B9%88%EF%BC%9F.md)
 - [重拾Eval能力：D4rt为Flutter注入AI进化基因](%E5%AD%98%E6%A1%A3/2026/%E9%87%8D%E6%8B%BEEval%E8%83%BD%E5%8A%9B%EF%BC%9AD4rt%E4%B8%BAFlutter%E6%B3%A8%E5%85%A5AI%E8%BF%9B%E5%8C%96%E5%9F%BA%E5%9B%A0.md)
 
 ### 🛠️ 效率工具
