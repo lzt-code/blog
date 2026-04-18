@@ -139,6 +139,26 @@ def resolve_local_path(rel_path, md_file_path):
     
     return local_rel_path, abs_path
 
+def convert_code_block_spaces_to_nbsp(markdown_content):
+    """将 fenced code block 中的普通空格替换为真实 NBSP 字符，避免公众号粘贴时空格被折叠。"""
+    pattern = r'```[^\n]*\n[\s\S]*?```'
+    nbsp_char = '\u00A0'
+
+    def _replace_spaces_in_block(match):
+        block = match.group(0)
+        lines = block.split('\n')
+
+        # 仅处理代码内容，不改动围栏行
+        if len(lines) <= 2:
+            return block
+
+        for i in range(1, len(lines) - 1):
+            lines[i] = lines[i].replace(' ', nbsp_char)
+
+        return '\n'.join(lines)
+
+    return re.sub(pattern, _replace_spaces_in_block, markdown_content)
+
 def convert_to_wechat_format(file_path):
     if not os.path.exists(file_path):
         print(f"错误：找不到文件 {file_path}")
@@ -283,6 +303,9 @@ def convert_to_wechat_format(file_path):
         return f"![{alt_text}]({full_url})"
 
     new_content = re.sub(r'!\[(.*?)\]\((.*?)\)', replace_link, content)
+
+    # 将代码块空格替换为 HTML 不换行空格实体，减少复制到公众号时的空格丢失
+    new_content = convert_code_block_spaces_to_nbsp(new_content)
 
     output_dir = "temp"
     if not os.path.exists(output_dir):
