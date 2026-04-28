@@ -187,10 +187,12 @@ def convert_to_wechat_format(file_path):
         print("-" * 50)
 
     # --- 0.5 扫描并转换 Mermaid ---
-    content, mermaid_pngs = process_mermaid_content(content, file_path)
+    # 我们在副本上操作，不修改原始 content 变量（如果你后面还需要原始 content 的话）
+    # 实际上这里直接修改 content 也可以，只要最后不写回原文件即可
+    working_content, mermaid_pngs = process_mermaid_content(content, file_path)
 
     # --- 1. 扫描并转换 SVG ---
-    matches = re.findall(r'!\[(.*?)\]\((.*?)\)', content)
+    matches = re.findall(r'!\[(.*?)\]\((.*?)\)', working_content)
     svgs_to_convert = []
     
     for alt, rel_path in matches:
@@ -206,49 +208,6 @@ def convert_to_wechat_format(file_path):
     if svgs_to_convert:
         generated_pngs = batch_convert_svg_to_png(svgs_to_convert)
 
-    # --- 1.2 更新原始文件中的链接 (SVG -> PNG) ---
-    # 用户要求：图片转换完成后修改文章中的链接，链接替换为png图片
-    
-    def update_source_link(match):
-        alt = match.group(1)
-        link = match.group(2)
-        
-        # 忽略网络链接
-        if link.startswith("http:") or link.startswith("https:"):
-            return match.group(0)
-            
-        # 如果是 SVG，替换后缀并增加 CDN 前缀
-        if link.lower().endswith('.svg'):
-            local_rel_path, abs_path = resolve_local_path(link, file_path)
-            if local_rel_path and abs_path:
-                # 对应的 PNG 路径
-                png_abs_path = os.path.splitext(abs_path)[0] + ".png"
-                
-                if os.path.exists(png_abs_path):
-                    # 获取唯一文件名
-                    unique_name = get_unique_filename(png_abs_path)
-                    
-                    # 拼接 CDN (使用扁平化的唯一文件名)
-                    full_url = cdn_prefix + unique_name
-                    return f"![{alt}]({full_url})"
-            
-        return match.group(0)
-
-    # 对 content 进行替换 (注意 content 此时已经包含了 Mermaid 的替换结果)
-    new_source_content = re.sub(r'!\[(.*?)\]\((.*?)\)', update_source_link, content)
-    
-    # 将修改后的内容写回原文件
-    # 这样本地 Markdown 文件中的链接也会被更新为 PNG，且 Mermaid 代码块会被替换为图片链接
-    try:
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(new_source_content)
-        print(f"  已更新原始文件链接: {file_path}")
-    except Exception as e:
-        print(f"  更新原始文件失败: {e}")
-    
-    # 更新 content 变量，供后续生成预览使用
-    content = new_source_content
-                
     all_generated_files = generated_pngs + mermaid_pngs
 
     # --- 1.6 上传图片到图床并验证 ---
@@ -256,56 +215,44 @@ def convert_to_wechat_format(file_path):
         if not upload_images_and_verify(IMAGE_REPO_LOCAL_PATH, all_generated_files):
             print("警告：图片上传失败，生成的链接可能无法访问！")
 
-    # --- 2. 替换链接 (用于生成预览文件) ---
-    # 正则替换：匹配 ![](./xxx) 或 ![](xxx) 这种相对路径
-    
-    def replace_link(match):
+    # --- 2. 替换所有链接为 CDN 链接 ---
+    def replace_with_cdn(match):
         alt_text = match.group(1)
         rel_path = match.group(2)
         
         local_rel_path, abs_path = resolve_local_path(rel_path, file_path)
         
         if local_rel_path is None:
-            # 网络链接
+            # 已经是网络链接
             return match.group(0)
             
-        # 检查是否是 SVG，如果是，替换为 PNG 后缀
-        filename = os.path.basename(local_rel_path)
         target_abs_path = abs_path
         
-        if filename.lower().endswith('.svg'):
-            # 尝试寻找对应的 PNG 文件
+        # 处理 SVG -> PNG 的映射
+        if rel_path.lower().endswith('.svg'):
             png_path = os.path.splitext(abs_path)[0] + ".png"
             if os.path.exists(png_path):
                 target_abs_path = png_path
-            else:
-                # 如果找不到 PNG，可能转换失败，暂时还是用 svg 名字（虽然可能无法访问）
-                filename = os.path.splitext(filename)[0] + ".png"
         
-        # 使用唯一文件名
+        # 获取最终文件名 (优先使用哈希唯一文件名)
         if os.path.exists(target_abs_path):
-            # 仅对我们生成的(将要上传的)文件使用哈希文件名
-            # 对于手动引用的本地图片，如果不在上传列表中，修改文件名会导致链接失效(因为没有上传)
-            if target_abs_path in all_generated_files:
-                filename = get_unique_filename(target_abs_path)
-            else:
-                filename = os.path.basename(target_abs_path)
-                if filename.lower().endswith('.svg'):
-                    filename = os.path.splitext(filename)[0] + ".png"
+            # 只有在上传列表中的文件才强制使用哈希文件名（确保 CDN 链接正确）
+            # 其他本地图片如果存在，也建议使用哈希文件名并上传（但此处逻辑仅处理已上传的）
+            filename = get_unique_filename(target_abs_path)
         else:
-            # 如果文件不存在，回退到原始 basename (可能不含 hash)
+            # 如果文件不存在（可能转换失败），回退到原始文件名
+            filename = os.path.basename(target_abs_path)
             if filename.lower().endswith('.svg'):
-                 filename = os.path.splitext(filename)[0] + ".png"
+                filename = os.path.splitext(filename)[0] + ".png"
             
-        # 拼接完整 CDN 链接 (扁平化)
+        # 拼接完整 CDN 链接
         full_url = cdn_prefix + filename
-        
         return f"![{alt_text}]({full_url})"
 
-    new_content = re.sub(r'!\[(.*?)\]\((.*?)\)', replace_link, content)
+    final_content = re.sub(r'!\[(.*?)\]\((.*?)\)', replace_with_cdn, working_content)
 
-    # 将代码块空格替换为 HTML 不换行空格实体，减少复制到公众号时的空格丢失
-    new_content = convert_code_block_spaces_to_nbsp(new_content)
+    # 将代码块空格替换为 HTML 不换行空格实体
+    final_content = convert_code_block_spaces_to_nbsp(final_content)
 
     output_dir = "temp"
     if not os.path.exists(output_dir):
@@ -314,10 +261,11 @@ def convert_to_wechat_format(file_path):
     output_path = os.path.join(output_dir, "预览.md")
     
     with open(output_path, 'w', encoding='utf-8') as f:
-        f.write(new_content)
+        f.write(final_content)
 
     print("="*20 + " 转换成功 " + "="*20)
     print(f"已保存到: {output_path}")
+    print("  (原始文件保持不变，保留了 Mermaid 代码块和原始链接)")
     print("="*50)
     print(f"\n[提示] 请确保你已经将图片推送到 GitHub: https://github.com/{GITHUB_USER}/{IMAGE_REPO_NAME}")
 
