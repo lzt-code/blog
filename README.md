@@ -39,7 +39,8 @@
 这里收录了往期发布的高质量技术文章，涵盖 Android 新特性、鸿蒙适配、AI 编程等热门话题。
 
 ### 🔥 热门话题
-- [**最新：Opencode从Tauri切回Electron，桌面端技术选型别被体积陷阱带偏了**](存档/2026/Opencode%E4%BB%8ETauri%E5%88%87%E6%8D%A2%E5%88%B0Electron%20%EF%BC%8C%E7%AB%AF%E4%BE%A7%E6%8A%80%E6%9C%AF%E6%A0%88%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%EF%BC%9F.md)
+- [**最新：Android 17的10个AI功能，国内用户真正能用的有几个？**](存档/2026/Android%2017%E7%9A%8410%E4%B8%AAAI%E5%8A%9F%E8%83%BD%EF%BC%8C%E5%9B%BD%E5%86%85%E7%94%A8%E6%88%B7%E7%9C%9F%E6%AD%A3%E8%83%BD%E7%94%A8%E7%9A%84%E6%9C%89%E5%87%A0%E4%B8%AA%EF%BC%9F.md)
+- [Opencode从Tauri切回Electron，桌面端技术选型别被体积陷阱带偏了](存档/2026/Opencode%E4%BB%8ETauri%E5%88%87%E6%8D%A2%E5%88%B0Electron%20%EF%BC%8C%E7%AB%AF%E4%BE%A7%E6%8A%80%E6%9C%AF%E6%A0%88%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%EF%BC%9F.md)
 - [经济学说AI不抢饭碗，为何现在找工作却越来越难？](存档/2026/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E8%AF%B4AI%E4%B8%8D%E6%8A%A2%E9%A5%AD%E7%A2%97%EF%BC%8C%E4%B8%BA%E4%BD%95%E7%8E%B0%E5%9C%A8%E6%89%BE%E5%B7%A5%E4%BD%9C%E5%8D%B4%E8%B6%8A%E6%9D%A5%E8%B6%8A%E9%9A%BE%EF%BC%9F.md)
 - [本地跑Gemma 4 12B写Flutter：是惊喜还是崩溃](存档/2026/%E6%9C%AC%E5%9C%B0%E8%B7%91Gemma%204%2012B%E5%86%99Flutter%EF%BC%9A%E6%98%AF%E6%83%8A%E5%96%9C%E8%BF%98%E6%98%AF%E5%B4%A9%E6%BA%83.md)
 - [官方俩月没回复的系统Bug，我用AI几分钟破案](存档/2026/%E5%AE%98%E6%96%B9%E4%BF%A9%E6%9C%88%E6%B2%A1%E5%9B%9E%E5%A4%8D%E7%9A%84%E7%B3%BB%E7%BB%9FBug%EF%BC%8C%E6%88%91%E7%94%A8AI%E5%87%A0%E5%88%86%E9%92%9F%E7%A0%B4%E6%A1%88.md)
