@@ -9,6 +9,10 @@ CLAUDE.md
 temp/
 .github/
 
+# AI Agent 角色/规则配置（与 .github/ 一同维护，不入 git）
+AGENTS.md
+.clinerules
+
 # System Files
 __pycache__/
 *.pyc
