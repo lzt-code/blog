@@ -1,0 +1,97 @@
+<svg width="900" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9aa0a6;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#9aa0a6;stop-opacity:1" />
+      <stop offset="27%" style="stop-color:#ea4335;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#34a853;stop-opacity:1" />
+      <stop offset="56%" style="stop-color:#34a853;stop-opacity:1" />
+      <stop offset="62%" style="stop-color:#fbbc04;stop-opacity:1" />
+      <stop offset="74%" style="stop-color:#fbbc04;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#4285f4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4285f4;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="timelineArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#4285f4"/>
+    </marker>
+    <marker id="timeAxisArrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 L3,5 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="400" fill="#f8f9fa"/>
+
+  <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1a73e8">Flutter 版本发布时间线 (2026.08)</text>
+
+  <line x1="80" y1="200" x2="760" y2="200" stroke="url(#timelineGradient)" stroke-width="4"/>
+  <line x1="100" y1="200" x2="798" y2="200" stroke="#9aa0a6" stroke-width="2" marker-end="url(#timeAxisArrow)"/>
+  <text x="108" y="220" font-family="Arial, sans-serif" font-size="11" fill="#9aa0a6">2025年10月</text>
+  <text x="752" y="220" text-anchor="start" font-family="Arial, sans-serif" font-size="10" fill="#9aa0a6">2026年8月</text>
+
+  <!-- 版本节点 -->
+
+  <!-- Flutter 3.35 -->
+  <circle cx="160" cy="200" r="8" fill="#9aa0a6" filter="url(#shadow)"/>
+  <line x1="160" y1="200" x2="160" y2="270" stroke="#9aa0a6" stroke-width="2"/>
+  <rect x="120" y="270" width="80" height="30" rx="5" fill="#9aa0a6" opacity="0.9"/>
+  <text x="160" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Flutter 3.35</text>
+  <text x="160" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">2025年10月</text>
+  <text x="160" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#9aa0a6" font-weight="bold">历史版本</text>
+
+  <!-- Flutter 3.38 -->
+  <circle cx="290" cy="200" r="8" fill="#ea4335" filter="url(#shadow)"/>
+  <line x1="290" y1="200" x2="290" y2="150" stroke="#ea4335" stroke-width="2"/>
+  <rect x="250" y="120" width="80" height="30" rx="5" fill="#ea4335" opacity="0.9"/>
+  <text x="290" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Flutter 3.38</text>
+  <text x="290" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">2026年2月</text>
+  <text x="290" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ea4335" font-weight="bold">⚠ 9月大限</text>
+  <text x="290" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ea4335">仅剩最后几天</text>
+
+  <!-- Flutter 3.41 -->
+  <circle cx="430" cy="200" r="10" fill="#34a853" filter="url(#shadow)"/>
+  <line x1="430" y1="200" x2="430" y2="270" stroke="#34a853" stroke-width="2"/>
+  <rect x="390" y="270" width="80" height="30" rx="5" fill="#34a853" opacity="0.9"/>
+  <text x="430" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Flutter 3.41</text>
+  <text x="430" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">2026年4月</text>
+  <text x="430" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34a853" font-weight="bold">★ 强烈推荐</text>
+  <text x="430" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34a853">绝对主力 · 近4个月零补丁</text>
+
+  <!-- Flutter 3.44 -->
+  <circle cx="580" cy="200" r="8" fill="#fbbc04" filter="url(#shadow)"/>
+  <line x1="580" y1="200" x2="580" y2="140" stroke="#fbbc04" stroke-width="2"/>
+  <rect x="540" y="110" width="80" height="30" rx="5" fill="#fbbc04" opacity="0.9"/>
+  <text x="580" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Flutter 3.44</text>
+  <text x="580" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">2026年5月</text>
+  <text x="580" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fbbc04" font-weight="bold">趋于稳定</text>
+  <text x="580" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#f9ab00">8月仅发1个补丁</text>
+
+  <!-- Flutter 3.47 -->
+  <circle cx="720" cy="200" r="8" fill="#4285f4" filter="url(#shadow)"/>
+  <line x1="720" y1="200" x2="720" y2="270" stroke="#4285f4" stroke-width="2"/>
+  <rect x="680" y="270" width="80" height="30" rx="5" fill="#4285f4" opacity="0.9"/>
+  <text x="720" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Flutter 3.47</text>
+  <text x="720" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">2026年8月</text>
+  <text x="720" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4285f4" font-weight="bold">新版本磨合期</text>
+  <text x="720" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4285f4">一周追发12项修复</text>
+
+  <rect x="140" y="350" width="640" height="40" fill="white" stroke="#e0e0e0" rx="5"/>
+  <text x="158" y="375" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">风险等级：</text>
+
+  <circle cx="280" cy="370" r="6" fill="#34a853"/>
+  <text x="295" y="375" font-family="Arial, sans-serif" font-size="11" fill="#333">稳定推荐</text>
+
+  <circle cx="385" cy="370" r="6" fill="#fbbc04"/>
+  <text x="400" y="375" font-family="Arial, sans-serif" font-size="11" fill="#333">观察/过渡</text>
+
+  <circle cx="495" cy="370" r="6" fill="#ea4335"/>
+  <text x="510" y="375" font-family="Arial, sans-serif" font-size="11" fill="#333">风险/大限</text>
+
+  <circle cx="605" cy="370" r="6" fill="#4285f4"/>
+  <text x="620" y="375" font-family="Arial, sans-serif" font-size="11" fill="#333">新版磨合</text>
+
+  <circle cx="705" cy="370" r="6" fill="#9aa0a6"/>
+  <text x="720" y="375" font-family="Arial, sans-serif" font-size="11" fill="#333">历史版本</text>
+</svg>

@@ -1,0 +1,113 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="productionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34a853;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#137333;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="developmentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285f4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a73e8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="techExplorationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9c27b0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6a1b9a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+
+  <!-- 标题 -->
+  <text x="450" y="30" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a73e8">不同场景Flutter版本选择指南 (2026-08)</text>
+
+  <!-- 生产环境 -->
+  <rect x="50" y="80" width="250" height="450" rx="15" fill="url(#productionGradient)" filter="url(#shadow)"/>
+  <text x="175" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">🏭 生产环境</text>
+  <text x="175" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">安心使用</text>
+
+  <!-- 生产环境推荐版本 -->
+  <rect x="70" y="145" width="210" height="75" rx="10" fill="white" opacity="0.9"/>
+  <text x="175" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#34a853">首选：Flutter 3.41.9</text>
+  <text x="175" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f9ab00">倒计时：9月UIScene</text>
+  <text x="175" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">近4个月零补丁，稳得不像话</text>
+
+  <!-- 生产环境理由 -->
+  <text x="70" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">选择理由：</text>
+  <text x="70" y="255" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 零补丁纪录延续近4个月</text>
+  <text x="70" y="270" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 9月UIKit迁移最低要求</text>
+  <text x="70" y="285" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 避开3.47磨合期风险</text>
+
+  <text x="70" y="325" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">风险提示：</text>
+  <text x="70" y="345" font-family="Arial, sans-serif" font-size="11" fill="white">⚠ 仍在3.38的已无退路</text>
+  <text x="70" y="360" font-family="Arial, sans-serif" font-size="11" fill="white">⚠ 12月SwiftPM需提前关注</text>
+
+  <!-- 升级策略 -->
+  <rect x="70" y="410" width="210" height="70" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="175" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">迁移建议</text>
+  <text x="80" y="445" font-family="Arial, sans-serif" font-size="10" fill="white">1. 本周完成3.38→3.41迁移</text>
+  <text x="80" y="460" font-family="Arial, sans-serif" font-size="10" fill="white">2. 核对插件SwiftPM支持情况</text>
+
+  <!-- 开发环境与新项目 -->
+  <rect x="325" y="80" width="250" height="450" rx="15" fill="url(#developmentGradient)" filter="url(#shadow)"/>
+  <text x="450" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">💻 开发与新项目</text>
+  <text x="450" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">把时间花在写代码上</text>
+
+  <!-- 开发环境推荐版本 -->
+  <rect x="345" y="145" width="210" height="75" rx="10" fill="white" opacity="0.9"/>
+  <text x="450" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4285f4">推荐：Flutter 3.41.9</text>
+  <text x="450" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ea4335">避坑：Flutter 3.47.x</text>
+  <text x="450" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">3.47.1一周修12项，工具链仍在抖</text>
+
+  <!-- 开发环境优势 -->
+  <text x="345" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">选择理由：</text>
+  <text x="345" y="255" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 不用陪跑新架构磨合</text>
+  <text x="345" y="270" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 插件生态适配最成熟</text>
+  <text x="345" y="285" font-family="Arial, sans-serif" font-size="11" fill="white">✓ 团队协作无额外心智负担</text>
+
+  <text x="345" y="325" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">注意事项：</text>
+  <text x="345" y="345" font-family="Arial, sans-serif" font-size="11" fill="white">⚠ 独立UI包迁移有早期bug</text>
+  <text x="345" y="360" font-family="Arial, sans-serif" font-size="11" fill="white">⚠ SwiftPM并行构建存竞态</text>
+  <text x="345" y="375" font-family="Arial, sans-serif" font-size="11" fill="white">⚠ 用3.41把时间花在写代码上</text>
+
+  <!-- 开发环境策略 -->
+  <rect x="345" y="410" width="210" height="70" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="450" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">使用策略</text>
+  <text x="355" y="445" font-family="Arial, sans-serif" font-size="10" fill="white">1. 新项目坚定选择 3.41.9</text>
+  <text x="355" y="460" font-family="Arial, sans-serif" font-size="10" fill="white">2. 待3.47.2+再评估切换窗口</text>
+
+  <!-- 技术预研 -->
+  <rect x="600" y="80" width="250" height="450" rx="15" fill="url(#techExplorationGradient)" filter="url(#shadow)"/>
+  <text x="725" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">🧪 技术预研</text>
+  <text x="725" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">提前体验新特性</text>
+
+  <!-- 技术预研推荐版本 -->
+  <rect x="620" y="145" width="210" height="60" rx="10" fill="white" opacity="0.9"/>
+  <text x="725" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#9c27b0">推荐：Flutter 3.47.1</text>
+  <text x="725" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">体验material_ui独立包</text>
+  <text x="725" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">与桌面端Impeller渲染</text>
+
+  <!-- 技术预研优势 -->
+  <text x="620" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">选择理由：</text>
+  <text x="620" y="255" font-family="Arial, sans-serif" font-size="11" fill="white">✓ Widget Previews已转正</text>
+  <text x="620" y="270" font-family="Arial, sans-serif" font-size="11" fill="white">✓ UIScene自动迁移就绪</text>
+  <text x="620" y="285" font-family="Arial, sans-serif" font-size="11" fill="white">✓ GenUI 0.10持续进化</text>
+
+  <text x="620" y="325" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">启动建议：</text>
+  <text x="620" y="345" font-family="Arial, sans-serif" font-size="11" fill="white">• 务必使用独立分支</text>
+  <text x="620" y="360" font-family="Arial, sans-serif" font-size="11" fill="white">• 注意iOS最低支持升至15</text>
+  <text x="620" y="375" font-family="Arial, sans-serif" font-size="11" fill="white">• 验证UI包与SwiftPM迁移</text>
+
+  <!-- 技术预研策略 -->
+  <rect x="620" y="410" width="210" height="70" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="725" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">使用策略</text>
+  <text x="630" y="445" font-family="Arial, sans-serif" font-size="10" fill="white">1. 专门拉取一个独立分支</text>
+  <text x="630" y="460" font-family="Arial, sans-serif" font-size="10" fill="white">2. 为11月设计库废弃探路</text>
+
+  <!-- 底部总结 -->
+  <rect x="50" y="550" width="800" height="40" fill="white" stroke="#e0e0e0" rx="5"/>
+  <text x="70" y="570" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">💡 总结：</text>
+  <text x="140" y="570" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">8月策略：生产与新项目用 3.41.9；3.38本周必动；3.44短期停留；3.47.1预研，为11月/12月大限探路。</text>
+</svg>

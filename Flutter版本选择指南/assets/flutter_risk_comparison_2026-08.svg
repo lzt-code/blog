@@ -1,0 +1,111 @@
+  <svg width="850" height="560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="safeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34a853;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#137333;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="warningGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbc04;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f9ab00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dangerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ea4335;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d33b2c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9c27b0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6a1b9a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="850" height="540" fill="#f8f9fa"/>
+  <text x="425" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a73e8">Flutter版本风险评估对比 (2026.08)</text>
+
+  <!-- 3.38 Final Deadline -->
+  <rect x="35" y="60" width="190" height="420" rx="10" fill="url(#dangerGradient)" filter="url(#shadow)"/>
+  <text x="130" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Flutter 3.38</text>
+  <text x="130" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">2026年2月</text>
+  <circle cx="130" cy="155" r="25" fill="#ea4335" stroke="white" stroke-width="3"/>
+  <text x="130" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">!</text>
+  <text x="130" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">最后通牒</text>
+  <text x="130" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">9月大限将至</text>
+  <text x="130" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• UIScene强制生效</text>
+  <text x="130" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 仅剩最后几天</text>
+  <text x="130" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• Xcode 27雪上加霜</text>
+  <text x="130" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">使用建议</text>
+  <text x="130" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 立即升级3.41.9</text>
+  <text x="130" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 本周内必须动手</text>
+  <rect x="45" y="370" width="170" height="25" rx="12" fill="white" opacity="0.9"/>
+  <text x="130" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#d33b2c">推荐指数: ★☆☆☆☆</text>
+  <rect x="45" y="405" width="170" height="60" rx="8" fill="white" opacity="0.15"/>
+  <text x="130" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">9月大限就在眼前，</text>
+  <text x="130" y="437" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">本周内完成3.38→3.41迁移</text>
+
+  <!-- 3.41 Production -->
+  <rect x="240" y="60" width="190" height="420" rx="10" fill="url(#safeGradient)" filter="url(#shadow)"/>
+  <text x="335" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Flutter 3.41</text>
+  <text x="335" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">2026年4月</text>
+  <circle cx="335" cy="155" r="25" fill="#34a853" stroke="white" stroke-width="3"/>
+  <text x="335" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">★</text>
+  <text x="335" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">绝对主力</text>
+  <text x="335" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">主要优势</text>
+  <text x="335" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 近4个月零补丁</text>
+  <text x="335" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• AI编码友好度高</text>
+  <text x="335" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 9月迁移最低要求</text>
+  <text x="335" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">使用建议</text>
+  <text x="335" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 生产强烈推荐</text>
+  <text x="335" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 新旧项目首选</text>
+  <rect x="250" y="370" width="170" height="25" rx="12" fill="white" opacity="0.9"/>
+  <text x="335" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#34a853">推荐指数: ★★★★★</text>
+  <rect x="250" y="405" width="170" height="60" rx="8" fill="white" opacity="0.15"/>
+  <text x="335" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">5月至今零补丁，</text>
+  <text x="335" y="437" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">近年来最稳定的Flutter大版本</text>
+
+  <!-- 3.44 Stabilizing -->
+  <rect x="445" y="60" width="190" height="420" rx="10" fill="url(#warningGradient)" filter="url(#shadow)"/>
+  <text x="540" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Flutter 3.44</text>
+  <text x="540" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">2026年5月</text>
+  <circle cx="540" cy="155" r="25" fill="#fbbc04" stroke="white" stroke-width="3"/>
+  <text x="540" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">✓</text>
+  <text x="540" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">趋于稳定</text>
+  <text x="540" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">关注要点</text>
+  <text x="540" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 8月仅发1个补丁</text>
+  <text x="540" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 严重问题基本清完</text>
+  <text x="540" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 11月设计库废弃临近</text>
+  <text x="540" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">使用建议</text>
+  <text x="540" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 可原地短期停留</text>
+  <text x="540" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 规划直跳3.47.2+</text>
+  <rect x="455" y="370" width="170" height="25" rx="12" fill="white" opacity="0.9"/>
+  <text x="540" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f9ab00">推荐指数: ★★★☆☆</text>
+  <rect x="455" y="405" width="170" height="60" rx="8" fill="white" opacity="0.15"/>
+  <text x="540" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">密集修复期已结束，</text>
+  <text x="540" y="437" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">但接力棒已交给3.47</text>
+
+  <!-- 3.47 New Release -->
+  <rect x="650" y="60" width="190" height="420" rx="10" fill="url(#techGradient)" filter="url(#shadow)"/>
+  <text x="745" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Flutter 3.47</text>
+  <text x="745" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">2026年8月</text>
+  <circle cx="745" cy="155" r="25" fill="#9c27b0" stroke="white" stroke-width="3"/>
+  <text x="745" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">N</text>
+  <text x="745" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">新版磨合期</text>
+  <text x="745" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">关注要点</text>
+  <text x="745" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 发布1周修复12项</text>
+  <text x="745" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 含插件注册安全加固</text>
+  <text x="745" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• iOS最低支持升至15</text>
+  <text x="745" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">使用建议</text>
+  <text x="745" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 测试环境预研</text>
+  <text x="745" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">• 生产等.2/.3再上</text>
+  <rect x="660" y="370" width="170" height="25" rx="12" fill="white" opacity="0.9"/>
+  <text x="745" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6a1b9a">推荐指数: ★★★☆☆</text>
+  <rect x="660" y="405" width="170" height="60" rx="8" fill="white" opacity="0.15"/>
+  <text x="745" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">架构调整幅度大，</text>
+  <text x="745" y="437" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">预研验证正当时</text>
+
+  <!-- Bottom recommendation bar -->
+  <rect x="35" y="495" width="780" height="45" rx="15" fill="rgba(26,115,232,0.1)" stroke="#1a73e8" stroke-width="1"/>
+  <text x="425" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a73e8">💡 8月一句话建议</text>
+  <rect x="35" y="510" width="780" height="35" rx="10" fill="rgba(52,168,83,0.1)"/>
+  <text x="425" y="533" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#137333">生产坚定使用 3.41.9；3.38本周必迁；3.44短期停留规划跳3.47；3.47.1测试环境预研，为11月/12月大限探路。</text>
+</svg>
