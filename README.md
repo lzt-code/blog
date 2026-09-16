@@ -65,7 +65,8 @@
 - [Kotlin vs Dart：当“优雅”变成心智负担，我选择了更简单的 Dart](%E5%AD%98%E6%A1%A3/2025/Kotlin%20vs%20Dart%EF%BC%9A%E5%BD%93%E2%80%9C%E4%BC%98%E9%9B%85%E2%80%9D%E5%8F%98%E6%88%90%E5%BF%83%E6%99%BA%E8%B4%9F%E6%8B%85%EF%BC%8C%E6%88%91%E9%80%89%E6%8B%A9%E4%BA%86%E6%9B%B4%E7%AE%80%E5%8D%95%E7%9A%84%20Dart.md)
 
 ### 🤖 AI 与编程
-- [**最新：Android Studio Quail 4发布，看日志我以为谷歌放弃Flutter了**](存档/2026/Android%20Studio%20Quail%204发布，看日志我以为谷歌放弃Flutter了.md)
+- [**最新：价值200的AI订阅实测，大家自己判断是否划算**](存档/2026/%E4%BB%B7%E5%80%BC200%E7%9A%84AI%E8%AE%A2%E9%98%85%E5%AE%9E%E6%B5%8B%EF%BC%8C%E5%A4%A7%E5%AE%B6%E8%87%AA%E5%B7%B1%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%88%92%E7%AE%97.md)
+- [Android Studio Quail 4发布，看日志我以为谷歌放弃Flutter了](存档/2026/Android%20Studio%20Quail%204发布，看日志我以为谷歌放弃Flutter了.md)
 - [Dart Skills CLI 1.0发布，老刘年初的预言兑现了](存档/2026/Dart%20Skills%20CLI%201.0发布，老刘年初的预言兑现了.md)
 - [现在回头看，Dart取消宏是无比正确的决定](存档/2026/现在回头看，Dart取消宏是无比正确的决定.md)
 - [为了一盘醋吃顿饺子：我把手头的免费AI订阅全榨干了](存档/2026/为了一盘醋吃顿饺子：我把手头的免费AI订阅全榨干了.md)
