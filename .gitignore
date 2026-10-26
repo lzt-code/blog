@@ -3,16 +3,20 @@
 .trae/
 .vscode/
 .workbuddy/
+.codebuddy/
 .claude.json
 CLAUDE.md
 
 # Scripts & Internal Tools
 temp/
 .github/
+.agents/
 
-# AI Agent 角色/规则配置（与 .github/ 一同维护，不入 git）
+# AI Agent 角色/规则配置（与 .github/、.agents/ 一同维护，不入 git）
 AGENTS.md
 .clinerules
+# OpenCode 项目配置（含本地 MCP token，不入 git）
+opencode.jsonc
 
 # System Files
 __pycache__/
