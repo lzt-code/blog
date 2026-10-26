@@ -47,7 +47,8 @@
 这里收录了往期发布的高质量技术文章，涵盖 Android 新特性、鸿蒙适配、AI 编程等热门话题。
 
 ### 🔥 热门话题
-- [**最新：Flet 1.0 思路很好，可惜来晚了**](存档/2026/Flet%201.0%20思路很好，可惜来晚了.md)
+- [**最新：你的Flutter项目要不要紧急升级3.47.8？**](存档/2026/你的Flutter项目要不要紧急升级3.47.8？.md)
+- [Flet 1.0 思路很好，可惜来晚了](存档/2026/Flet%201.0%20思路很好，可惜来晚了.md)
 - [Android 17的10个AI功能，国内用户真正能用的有几个？](存档/2026/Android%2017%E7%9A%8410%E4%B8%AAAI%E5%8A%9F%E8%83%BD%EF%BC%8C%E5%9B%BD%E5%86%85%E7%94%A8%E6%88%B7%E7%9C%9F%E6%AD%A3%E8%83%BD%E7%94%A8%E7%9A%84%E6%9C%89%E5%87%A0%E4%B8%AA%EF%BC%9F.md)
 - [Flutter 3.47 更新要点：Material 正式分家，老项目先别急着更新](存档/2026/Flutter%203.47%20%E6%9B%B4%E6%96%B0%E8%A6%81%E7%82%B9%EF%BC%9AMaterial%20%E6%AD%A3%E5%BC%8F%E5%88%86%E5%AE%B6%EF%BC%8C%E8%80%81%E9%A1%B9%E7%9B%AE%E5%85%88%E5%88%AB%E7%9D%80%E6%80%A5%E6%9B%B4%E6%96%B0.md)
 - [Opencode从Tauri切回Electron，桌面端技术选型别被体积陷阱带偏了](存档/2026/Opencode%E4%BB%8ETauri%E5%88%87%E6%8D%A2%E5%88%B0Electron%20%EF%BC%8C%E7%AB%AF%E4%BE%A7%E6%8A%80%E6%9C%AF%E6%A0%88%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%EF%BC%9F.md)
