@@ -1,0 +1,81 @@
+<svg width="900" height="420" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Flutter 版本演进与最近补丁时间线（2026年11月）</title>
+  <desc id="desc">对比 Flutter 3.38、3.41、3.44、3.47 和 3.50 的最近补丁及版本定位。3.47.9 为本月生产推荐，3.50.1 用于技术预研。</desc>
+  <defs>
+    <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea4335"/>
+      <stop offset="22%" stop-color="#ea4335"/>
+      <stop offset="28%" stop-color="#f9ab00"/>
+      <stop offset="47%" stop-color="#f9ab00"/>
+      <stop offset="53%" stop-color="#fbbc04"/>
+      <stop offset="68%" stop-color="#fbbc04"/>
+      <stop offset="74%" stop-color="#34a853"/>
+      <stop offset="88%" stop-color="#34a853"/>
+      <stop offset="94%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#9c27b0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <marker id="timeAxisArrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 L3,5 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="420" fill="#f8f9fa"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#1a73e8">Flutter 版本演进与最近补丁（2026.11）</text>
+  <text x="450" y="57" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#5f6368">日期为文中所列各版本最近补丁的发布时间</text>
+
+  <line x1="70" y1="208" x2="825" y2="208" stroke="url(#timelineGradient)" stroke-width="5"/>
+  <line x1="70" y1="208" x2="842" y2="208" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#timeAxisArrow)"/>
+
+  <!-- Flutter 3.38 -->
+  <circle cx="110" cy="208" r="9" fill="#ea4335" filter="url(#shadow)"/>
+  <line x1="110" y1="208" x2="110" y2="277" stroke="#ea4335" stroke-width="2"/>
+  <rect x="55" y="277" width="110" height="32" rx="6" fill="#ea4335"/>
+  <text x="110" y="298" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Flutter 3.38</text>
+  <text x="110" y="327" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#5f6368">3.38.10 · 2026.02.12</text>
+  <text x="110" y="187" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="bold" fill="#d33b2c">不再推荐</text>
+  <text x="110" y="169" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="10" fill="#d33b2c">不作为生产升级选项</text>
+
+  <!-- Flutter 3.41 -->
+  <circle cx="275" cy="208" r="9" fill="#f9ab00" filter="url(#shadow)"/>
+  <line x1="275" y1="208" x2="275" y2="139" stroke="#f9ab00" stroke-width="2"/>
+  <rect x="220" y="107" width="110" height="32" rx="6" fill="#f9ab00"/>
+  <text x="275" y="128" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Flutter 3.41</text>
+  <text x="275" y="96" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#5f6368">3.41.9 · 2026.05.01</text>
+  <text x="275" y="232" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="bold" fill="#b06000">升级压力落地</text>
+  <text x="275" y="250" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="10" fill="#b06000">稳定记录不能替代安全修复</text>
+
+  <!-- Flutter 3.44 -->
+  <circle cx="440" cy="208" r="9" fill="#fbbc04" filter="url(#shadow)"/>
+  <line x1="440" y1="208" x2="440" y2="277" stroke="#fbbc04" stroke-width="2"/>
+  <rect x="385" y="277" width="110" height="32" rx="6" fill="#fbbc04"/>
+  <text x="440" y="298" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#3c4043">Flutter 3.44</text>
+  <text x="440" y="327" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#5f6368">3.44.9 · 2026.08.07</text>
+  <text x="440" y="187" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="bold" fill="#b06000">过渡版本</text>
+  <text x="440" y="169" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="10" fill="#b06000">满足 SwiftPM 起点</text>
+  <text x="440" y="153" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="10" fill="#b06000">缺少 10 月证书修复</text>
+
+  <!-- Flutter 3.47 -->
+  <circle cx="605" cy="208" r="11" fill="#34a853" filter="url(#shadow)"/>
+  <line x1="605" y1="208" x2="605" y2="139" stroke="#34a853" stroke-width="2"/>
+  <rect x="550" y="107" width="110" height="32" rx="6" fill="#34a853"/>
+  <text x="605" y="128" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Flutter 3.47</text>
+  <text x="605" y="96" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#5f6368">3.47.9 · 2026.10.30</text>
+  <text x="605" y="232" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="bold" fill="#137333">★ 本月生产推荐</text>
+  <text x="605" y="250" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="10" fill="#137333">证书修复 + SwiftPM 门槛</text>
+
+  <!-- Flutter 3.50 -->
+  <circle cx="770" cy="208" r="9" fill="#9c27b0" filter="url(#shadow)"/>
+  <line x1="770" y1="208" x2="770" y2="277" stroke="#9c27b0" stroke-width="2"/>
+  <rect x="715" y="277" width="110" height="32" rx="6" fill="#9c27b0"/>
+  <text x="770" y="298" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Flutter 3.50</text>
+  <text x="770" y="327" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#5f6368">3.50.1 · 2026.11.20</text>
+  <text x="770" y="187" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" font-weight="bold" fill="#6a1b9a">技术预研</text>
+  <text x="770" y="169" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="10" fill="#6a1b9a">发布 8 天后迎来 hotfix</text>
+  <text x="770" y="153" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="10" fill="#6a1b9a">生产继续观察</text>
+
+  <rect x="95" y="356" width="710" height="46" rx="7" fill="#ffffff" stroke="#e0e0e0"/>
+  <text x="450" y="384" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#137333">11 月选型核心：优先升级 3.47.9，重新构建并发布；3.50.1 先在预研分支验证。</text>
+</svg>

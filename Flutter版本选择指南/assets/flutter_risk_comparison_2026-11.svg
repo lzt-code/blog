@@ -1,0 +1,85 @@
+<svg width="900" height="370" viewBox="0 0 900 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Flutter 版本风险评估对比（2026年11月）</title>
+  <desc id="desc">3.47.9 是本月生产推荐，3.50.1 适合预研，3.44.9 是过渡版本，3.41.9 及更早版本需要处理证书风险。</desc>
+  <defs>
+    <linearGradient id="dangerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea4335"/>
+      <stop offset="100%" stop-color="#c5221f"/>
+    </linearGradient>
+    <linearGradient id="oldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9ab00"/>
+      <stop offset="100%" stop-color="#e37400"/>
+    </linearGradient>
+    <linearGradient id="warningGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbc04"/>
+      <stop offset="100%" stop-color="#f29900"/>
+    </linearGradient>
+    <linearGradient id="safeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34a853"/>
+      <stop offset="100%" stop-color="#137333"/>
+    </linearGradient>
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="370" fill="#f8f9fa"/>
+  <text x="450" y="36" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="23" font-weight="bold" fill="#1a73e8">Flutter 版本风险评估对比（2026.11）</text>
+
+  <!-- 3.38 -->
+  <rect x="25" y="65" width="158" height="215" rx="10" fill="url(#dangerGradient)" filter="url(#shadow)"/>
+  <text x="104" y="102" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Flutter 3.38</text>
+  <rect x="42" y="119" width="124" height="29" rx="14.5" fill="#ffffff" opacity="0.24"/>
+  <text x="104" y="139" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">不再推荐</text>
+  <text x="104" y="176" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" font-weight="bold" fill="#ffffff">★☆☆☆☆</text>
+  <text x="104" y="210" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#ffffff">旧版缺少证书修复</text>
+  <text x="104" y="232" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#ffffff">不作为生产升级选项</text>
+  <text x="104" y="260" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">最近补丁 3.38.10</text>
+
+  <!-- 3.41 -->
+  <rect x="196" y="65" width="158" height="215" rx="10" fill="url(#oldGradient)" filter="url(#shadow)"/>
+  <text x="275" y="102" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Flutter 3.41</text>
+  <rect x="213" y="119" width="124" height="29" rx="14.5" fill="#ffffff" opacity="0.24"/>
+  <text x="275" y="139" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">升级压力落地</text>
+  <text x="275" y="176" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" font-weight="bold" fill="#ffffff">★★☆☆☆</text>
+  <text x="275" y="210" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#ffffff">稳定接近 7 个月</text>
+  <text x="275" y="232" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#ffffff">稳定记录不等于安全</text>
+  <text x="275" y="260" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">最近补丁 3.41.9</text>
+
+  <!-- 3.44 -->
+  <rect x="367" y="65" width="158" height="215" rx="10" fill="url(#warningGradient)" filter="url(#shadow)"/>
+  <text x="446" y="102" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="bold" fill="#3c4043">Flutter 3.44</text>
+  <rect x="384" y="119" width="124" height="29" rx="14.5" fill="#ffffff" opacity="0.5"/>
+  <text x="446" y="139" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#3c4043">过渡版本</text>
+  <text x="446" y="176" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" font-weight="bold" fill="#3c4043">★★★☆☆</text>
+  <text x="446" y="210" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#3c4043">满足 SwiftPM 起点</text>
+  <text x="446" y="232" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#3c4043">缺少 10 月证书修复</text>
+  <text x="446" y="260" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="bold" fill="#3c4043">最近补丁 3.44.9</text>
+
+  <!-- 3.47 -->
+  <rect x="538" y="65" width="158" height="215" rx="10" fill="url(#safeGradient)" filter="url(#shadow)"/>
+  <text x="617" y="102" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Flutter 3.47</text>
+  <rect x="555" y="119" width="124" height="29" rx="14.5" fill="#ffffff" opacity="0.24"/>
+  <text x="617" y="139" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">本月生产推荐</text>
+  <text x="617" y="176" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" font-weight="bold" fill="#ffffff">★★★★★</text>
+  <text x="617" y="210" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#ffffff">包含证书安全修复</text>
+  <text x="617" y="232" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#ffffff">跨过 SwiftPM 门槛</text>
+  <text x="617" y="260" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">推荐版本 3.47.9</text>
+
+  <!-- 3.50 -->
+  <rect x="709" y="65" width="158" height="215" rx="10" fill="url(#techGradient)" filter="url(#shadow)"/>
+  <text x="788" y="102" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Flutter 3.50</text>
+  <rect x="726" y="119" width="124" height="29" rx="14.5" fill="#ffffff" opacity="0.24"/>
+  <text x="788" y="139" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">技术预研</text>
+  <text x="788" y="176" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" font-weight="bold" fill="#ffffff">★★★☆☆</text>
+  <text x="788" y="210" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#ffffff">新功能值得验证</text>
+  <text x="788" y="232" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" fill="#ffffff">生产继续观察</text>
+  <text x="788" y="260" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">最近补丁 3.50.1</text>
+
+  <rect x="25" y="304" width="842" height="45" rx="10" fill="#e8f0fe" stroke="#1a73e8"/>
+  <text x="446" y="332" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#174ea6">安全条件已经变化：生产升级选 3.47.9，不再把 3.44.9 作为本轮升级终点。</text>
+</svg>

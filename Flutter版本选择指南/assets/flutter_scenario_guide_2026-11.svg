@@ -1,0 +1,55 @@
+<svg width="900" height="370" viewBox="0 0 900 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">不同场景 Flutter 版本选择指南（2026年11月）</title>
+  <desc id="desc">生产环境选择 3.47.9，近期上线的新项目选择 3.47.9，验证周期充足的项目可并行评估 3.50.1，技术预研选择 3.50.1。</desc>
+  <defs>
+    <linearGradient id="productionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34a853"/>
+      <stop offset="100%" stop-color="#137333"/>
+    </linearGradient>
+    <linearGradient id="developmentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285f4"/>
+      <stop offset="100%" stop-color="#1a73e8"/>
+    </linearGradient>
+    <linearGradient id="techExplorationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="370" fill="#f8f9fa"/>
+  <text x="450" y="38" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="24" font-weight="bold" fill="#1a73e8">不同场景 Flutter 版本选择指南（2026.11）</text>
+
+  <!-- 生产环境 -->
+  <rect x="50" y="70" width="250" height="220" rx="15" fill="url(#productionGradient)" filter="url(#shadow)"/>
+  <text x="175" y="108" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#ffffff">生产环境</text>
+  <rect x="78" y="127" width="194" height="55" rx="10" fill="#ffffff" opacity="0.94"/>
+  <text x="175" y="162" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#137333">Flutter 3.47.9</text>
+  <text x="175" y="211" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#ffffff">证书修复与 SwiftPM 双达标</text>
+  <text x="175" y="234" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#ffffff">完成回归后重新构建并发布</text>
+  <text x="175" y="267" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">本月生产升级首选</text>
+
+  <!-- 开发环境与新项目 -->
+  <rect x="325" y="70" width="250" height="220" rx="15" fill="url(#developmentGradient)" filter="url(#shadow)"/>
+  <text x="450" y="108" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#ffffff">开发与新项目</text>
+  <rect x="350" y="127" width="200" height="55" rx="10" fill="#ffffff" opacity="0.94"/>
+  <text x="450" y="151" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" font-weight="bold" fill="#1a73e8">近期上线：3.47.9</text>
+  <text x="450" y="171" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#1a73e8">周期充足：并行评估 3.50.1</text>
+  <text x="450" y="211" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#ffffff">按上线时间与依赖兼容决定</text>
+  <text x="450" y="234" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#ffffff">大版本验证放在独立分支</text>
+  <text x="450" y="267" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">避免重复承担迁移成本</text>
+
+  <!-- 技术预研 -->
+  <rect x="600" y="70" width="250" height="220" rx="15" fill="url(#techExplorationGradient)" filter="url(#shadow)"/>
+  <text x="725" y="108" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#ffffff">技术预研</text>
+  <rect x="628" y="127" width="194" height="55" rx="10" fill="#ffffff" opacity="0.94"/>
+  <text x="725" y="162" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#6a1b9a">Flutter 3.50.1</text>
+  <text x="725" y="211" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#ffffff">验证原生互操作与设计包</text>
+  <text x="725" y="234" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" fill="#ffffff">检查 SwiftPM 与 Android 构建</text>
+  <text x="725" y="267" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">生产项目暂不追赶新版</text>
+
+  <rect x="50" y="312" width="800" height="40" rx="6" fill="#ffffff" stroke="#e0e0e0"/>
+  <text x="450" y="337" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#333333">11 月策略：生产优先 3.47.9，3.50.1 先预研；三方库按联系作者、fork 适配、短期补救处理。</text>
+</svg>
